@@ -44,7 +44,7 @@ function App() {
   return (
   <div >
     <Header/>
-    <main className="min-h-screen pt-20" >
+    <main className="min-h-[calc(100vh)] pt-20" >
       <Outlet/>
      <ToastContainer{...toastOptions} /> 
      <FixedButton/>

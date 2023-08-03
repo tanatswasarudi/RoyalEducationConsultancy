@@ -68,7 +68,7 @@ const Register = () => {
             
 
   return (
-    <div className='mt-4 grow flex items-center justify-around'>
+    <div className='mt-4 grow flex flex-col items-center justify-around'>
       <div className="w-full h-[300px]">
         <img src={Study} alt="" />
       </div>
@@ -78,7 +78,7 @@ const Register = () => {
             <img src={user} alt="" className='w-full h-full' />
           </div>
           <form className='' onSubmit={handleSubmit}>
-        <label htmlFor="name" className='font-serif'>Full Name:</label>
+        <label htmlFor="name" className='font-serif mt-4'>Full Name:</label>
         <div className="flex items-center w-full border my-1 py-2 px-3 rounded-full">
             <span className=''><FaUserTie/></span>
             <input type='text' name='name' placeholder='John Doe' className='w-full outline-none' value={data.name} onChange={handleOnChange}/>
@@ -116,7 +116,7 @@ const Register = () => {
          <div className="mt-4">
          <span className='w-1/2 rounded-full'>
           <select className='w-full border rounded' id='altcourse' name='altcourse' onChange={handleOnChange} value={data.altcourse}>
-          <option value={"other"} className='text-sm text-gray-500'>Select Course</option>
+          <option value={"other"} className='text-sm text-gray-500'>Alternative Course</option>
           <option value={"arts & commerce"}>Arts & Commerce</option>
           <option value={"computer"}>Computer</option>
           <option value={"designing"}>Designing</option>
@@ -166,7 +166,7 @@ const Register = () => {
             </span>
             </div>
        
-        <button className='bg-primary rounded-full'>Register</button>
+        <button className='bg-primary p-4 rounded-full'>Register</button>
         <p className='mt-4 px-2'>Already Have an Account ? <Link to='/login' className='text-blue-500'>Login</Link> </p>
       </form>
           </div>

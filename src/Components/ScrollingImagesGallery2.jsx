@@ -1,15 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import img1 from '../Assets/europe.jpg';
-import img2 from '../Assets/europe2.jpg';
-import img3 from '../Assets/scholar.jpg';
-import img4 from '../Assets/scholar2.jpg';
-import img5 from '../Assets/scholarships.png';
-import img6 from '../Assets/scholarships2.png';
-import img7 from '../Assets/study.png';
+import img1 from '../Assets/studen3.jpg';
+import img2 from '../Assets/student4.jpg';
 
-const images = [img1, img2, img3, img4, img5, img6, img7]; // Add other images to this array
 
-const ScrollingImages = () => {
+const images = [img1, img2]; // Add other images to this array
+
+const ScrollingImagesGallery2 = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
@@ -22,19 +18,20 @@ const ScrollingImages = () => {
 
   return (
     <div className="relative overflow-hidden">
-      {images.map((image, index) => (
+        {images.map((image, index) => (
         <img
           key={index}
           src={image}
           alt={`Image ${index + 1}`}
-          className={`absolute top-0 left-0 w-full h-full opacity-0 transition-opacity duration-1000 ${
+          className={`w-full h-full opacity-0 transition-opacity duration-1000 ${
             index === currentIndex ? 'opacity-100' : ''
           }`}
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}
         />
       ))}
-    </div>
+        </div>
+      
   );
 };
 
-export default ScrollingImages;
+export default ScrollingImagesGallery2;

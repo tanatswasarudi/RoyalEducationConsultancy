@@ -36,20 +36,22 @@ const Header = () => {
     dispatch(logoutRedux());  
   };
   return (
-      <header className=" p-4 flex justify-between items-center w-full fixed z-50 bg-white ">
-           <div>
+      <header className="fixed drop-shadow-md shadow h-20 w-full z-50  bg-white ">
+          <div className="flex items-center shadow bg-slate-600 justify-between">
+          <div>
            <Link to={"/"} className=" cursor-pointerpy-2 px-4 ">
             <div className="h-20 w-22"><img src={logo} alt="" className='h-full w-full'/></div>       
                 </Link>
            </div>  
-        <div className="flex items-center gap-2 font-serif font-semibold text-blue-950">
-        <Link className="hover:text-blue-500">Home</Link>
-           <Link to='/Courses' className="hover:text-blue-500">Courses</Link>
-           <Link to='/About' className="hover:text-blue-500">About</Link>
-           <Link to='/Scholarships' className="hover:text-blue-500">Scholarships</Link>
-           <Link to='AgentRegistration' className="hover:text-blue-500">Join Our Team</Link>
-            </div>            
-        <div className="flex items-center cursor-pointer gap-2 rounded-full border border-gray-300 py-2 px-4 shadow-md shadow-gray-300 " onClick={handleShowMenu}>
+           <div className="flex items-center gap-3 md:gap-7">
+           <div className="hidden md:flex gap-4 md:gap-6 text-base text-cyan-500 md:text-lg">
+           <Link to='/'>Home</Link>
+           <Link to='/Courses'>Courses</Link>
+           <Link to='/About'>About</Link>
+           <Link to='/Scholarships'>Scholarships</Link>
+           <Link to='/AgentRegistration'>Join Our Team</Link>
+            </div>
+            <div className="flex items-center cursor-pointer gap-2 rounded-full border border-gray-300 py-2 px-4 shadow-md shadow-gray-300 " onClick={handleShowMenu}>
                <GiHamburgerMenu className='text-2xl' /> 
                <BiSolidUserCircle className='text-2xl'/>  
          <div className='mt-30 py-3'>
@@ -71,6 +73,11 @@ const Header = () => {
                     </Link>
                     )
                   }
+                    <Link to='/' className=" mb-6">Home</Link>
+                    <Link to='/Courses' className=" mb-6">Courses</Link>
+                    <Link to='/About' className=" mb-6">About</Link>
+                    <Link to='/Scholarships' className=" mb-6">Scholarships</Link>
+                    <Link to='/AgentRegistration' className=" mb-6">Join Our Team</Link>
                    <FaWhatsappSquare onClick={connectWithWhatsApp} className="text-3xl mb-6 text-green-600"/>
                   <IoMdCall onClick={handleCallRequest}  className="text-blue-500 text-3xl"/>
               </nav>
@@ -78,7 +85,11 @@ const Header = () => {
             )
            }
           </div>
-       </div>
+           </div>
+           </div>
+          </div>
+                    
+       
         </header>
   )
 }
