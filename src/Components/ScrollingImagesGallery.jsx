@@ -21,19 +21,16 @@ const ScrollingImagesGallery = () => {
 
   return (
     <div className="relative w-full h-[300px] overflow-hidden">
-      <div
-        className="flex absolute h-full transition-transform duration-1000"
-        style={{
-          transform: `translateX(-${currentIndex * 100}%)`,
-        }}
-      >
+      <div className="flex absolute h-full transition-transform duration-1000">
         {images.map((image, index) => (
-          <img
+          <div
             key={index}
-            src={image}
-            alt={`Image ${index + 1}`}
-            className="w-full h-full"
-          />
+            className={`w-full h-full transform ${
+              index === currentIndex ? '-translate-x-full' : 'translate-x-full'
+            }`}
+          >
+            <img src={image} alt={`Image ${index + 1}`} className="w-full h-full" />
+          </div>
         ))}
       </div>
     </div>
@@ -41,3 +38,4 @@ const ScrollingImagesGallery = () => {
 };
 
 export default ScrollingImagesGallery;
+

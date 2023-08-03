@@ -6,7 +6,7 @@ import img4 from '../Assets/student4.jpg';
 import img5 from '../Assets/student5.jpg';
 import img6 from '../Assets/student6.jpg';
 
-const images = [img1, img2 , img3, img4, img5, img6]; // Add other images to this array
+const images = [img1, img2, img3, img4, img5, img6]; // Add other images to this array
 
 const ScrollingImages = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -21,19 +21,16 @@ const ScrollingImages = () => {
 
   return (
     <div className="relative w-full h-[300px] overflow-hidden">
-      <div
-        className="flex absolute h-full transition-transform duration-1000"
-        style={{
-          transform: `translateX(-${currentIndex * 100}%)`,
-        }}
-      >
+      <div className="flex absolute h-full transition-transform duration-1000">
         {images.map((image, index) => (
-          <img
+          <div
             key={index}
-            src={image}
-            alt={`Image ${index + 1}`}
-            className="w-full h-full"
-          />
+            className={`w-full h-full transform ${
+              index === currentIndex ? '-translate-x-full' : 'translate-x-full'
+            }`}
+          >
+            <img src={image} alt={`Image ${index + 1}`} className="w-full h-full" />
+          </div>
         ))}
       </div>
     </div>
@@ -41,3 +38,4 @@ const ScrollingImages = () => {
 };
 
 export default ScrollingImages;
+
