@@ -68,12 +68,12 @@ const Register = () => {
             
 
   return (
-    <div className='mt-10 grow flex flex-col items-center justify-around'>
-      <div className="w-full h-20">
+    <div className=' grow flex flex-col items-center justify-around'>
+      <div className="w-full h-20 md:mb-64">
         <img src={Study} alt="" />
       </div>
         <div className="mt-10">
-         <div className="w-full max-w-sm m-auto flex items-center flex-col p-2 ">
+         <div className="w-full max-w-md mx-auto flex items-center flex-col p-2 ">
             <div className="w-20 h-20 overflow-hidden rounded-full drop-shadow-xl shadow-md m-auto relative">
             <img src={user} alt="" className='w-full h-full' />
           </div>
@@ -113,7 +113,7 @@ const Register = () => {
           </select>
           </span>
          </div>
-         <div className="mt-4">
+         <div className="mt-4 mb-4">
          <span className='w-1/2 rounded-full'>
           <select className='w-full border rounded' id='altcourse' name='altcourse' onChange={handleOnChange} value={data.altcourse}>
           <option value={"other"} className='text-sm text-gray-500'>Alternative Course</option>
@@ -127,28 +127,28 @@ const Register = () => {
           </select>
           </span>
          </div>
-         <label htmlFor="phone" className='font-serif mt-4'>Your Phone Number:</label>
+         <label htmlFor="phone" className='font-serif mt-7'>Your Phone Number:</label>
          <div className='flex items-center w-full border my-1 py-2 px-3 rounded-full'>
               <span>
               <AiFillPhone className="text-md " />
               </span>
               <input type='text' name='phone' placeholder='+263 234567891' className=' w-full outline-none' value={data.phone} onChange={handleOnChange}/>  
          </div>
-         <label htmlFor="guardian" className='font-serif mt-4'>Name of Guardian</label>
+         <label htmlFor="guardian" className='font-serif mt-7'>Name of Guardian</label>
          <div className='flex items-center w-full border my-1 py-2 px-3 rounded-full'>
               <span>
               <BiSolidUserPin className="text-md " />
               </span>
               <input type='text' name='guardian' placeholder='Name of Guardian' className=' w-full outline-none' value={data.guardian} onChange={handleOnChange}/>  
          </div>
-         <label htmlFor="Gnumber" className='font-serif mt-4'>Guardian's Number</label>
+         <label htmlFor="Gnumber" className='font-serif mt-7'>Guardian's Number</label>
          <div className='flex items-center w-full border my-1 py-2 px-3 rounded-full'>
               <span>
               <AiFillPhone className="text-md " />
               </span>
               <input type='text' name='Gnumber' placeholder='+263 123456789' className=' w-full outline-none' value={data.Gnumber} onChange={handleOnChange}/>  
          </div>
-         <label htmlFor="agent" className='font-serif mt-4'>Who reffered you?</label>
+         <label htmlFor="agent" className='font-serif mt-7'>Who reffered you?</label>
          <div className='flex items-center w-full border my-1 py-2 px-3 rounded-full'>
               <span>
               <MdSupportAgent className="text-md " />

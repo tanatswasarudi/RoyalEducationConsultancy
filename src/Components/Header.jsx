@@ -36,7 +36,7 @@ const Header = () => {
     dispatch(logoutRedux());  
   };
   return (
-      <header className="fixed drop-shadow-md shadow h-20 w-full z-50  bg-white ">
+      <header className="fixed top-0 left-0  h-20 shadow flex items-center  w-full z-50  bg-white ">
           <div className="flex items-center justify-between">
           <div>
            <Link to={"/"} className=" cursor-pointerpy-2 px-4 ">

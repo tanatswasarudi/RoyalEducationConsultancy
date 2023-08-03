@@ -72,8 +72,8 @@ const Login = () => {
   return (
     <div className='mt-4 grow flex items-center justify-around'>
         <div className="mb-64">
-        <div className="">
-          <img src={login} alt="" className='rounded-full' />
+        <div className="w-20 h-20">
+          <img src={login} alt="" className='rounded-full w-full h-full' />
         </div>
       <form className='max-w-md mx-auto' onSubmit={handleSubmit}>
         <div className='flex items-center w-full border my-1 py-2 px-3 rounded-full'>
