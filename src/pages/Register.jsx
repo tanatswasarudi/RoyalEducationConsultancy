@@ -68,8 +68,8 @@ const Register = () => {
             
 
   return (
-    <div className='mt-4 grow flex flex-col items-center justify-around'>
-      <div className="w-full h-[300px]">
+    <div className='mt-10 grow flex flex-col items-center justify-around'>
+      <div className="w-full h-20">
         <img src={Study} alt="" />
       </div>
         <div className="mt-10">

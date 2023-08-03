@@ -48,9 +48,9 @@ function App() {
       <Outlet/>
      <ToastContainer{...toastOptions} /> 
      <FixedButton/>
-    <Footer/> 
+     
     </main>     
-    
+    <Footer/>
   </div>
   );
 }

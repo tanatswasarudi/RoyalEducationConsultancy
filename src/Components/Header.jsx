@@ -37,7 +37,7 @@ const Header = () => {
   };
   return (
       <header className="fixed drop-shadow-md shadow h-20 w-full z-50  bg-white ">
-          <div className="flex items-center shadow bg-slate-600 justify-between">
+          <div className="flex items-center justify-between">
           <div>
            <Link to={"/"} className=" cursor-pointerpy-2 px-4 ">
             <div className="h-20 w-22"><img src={logo} alt="" className='h-full w-full'/></div>       
