@@ -36,14 +36,14 @@ const Header = () => {
     dispatch(logoutRedux());  
   };
   return (
-      <header className="fixed top-0 left-0  h-20 shadow flex items-center  w-full z-50  bg-white ">
-          <div className="flex items-center justify-between">
+      <header className="fixed top-0 left-0 justify-between h-20 shadow flex items-center  w-full z-50  bg-white ">
+          
           <div>
-           <Link to={"/"} className=" cursor-pointerpy-2 px-4 ">
+           <Link to={"/"} className=" cursor-pointer px-4 ">
             <div className="h-20 w-22"><img src={logo} alt="" className='h-full w-full'/></div>       
                 </Link>
            </div>  
-           <div className="flex items-center gap-3 md:gap-7">
+           <div className="flex items-center gap-3 md:gap-7 ">
            <div className="hidden md:flex gap-4 md:gap-6 text-base text-cyan-500 md:text-lg">
            <Link to='/'>Home</Link>
            <Link to='/Courses'>Courses</Link>
@@ -86,9 +86,7 @@ const Header = () => {
            }
           </div>
            </div>
-           </div>
-          </div>
-                    
+           </div>          
        
         </header>
   )
