@@ -78,13 +78,13 @@ const Register = () => {
             <img src={user} alt="" className='w-full h-full' />
           </div>
           <form className='' onSubmit={handleSubmit}>
-        <label htmlFor="name" className='font-serif my-2'>Full Name:</label>
+        <label htmlFor="name" className='font-serif mt-4'>Full Name:</label>
         <div className="flex items-center w-full border  rounded-full py-2 px-3">
             <span className=''><FaUserTie/></span>
             <input type='text' name='name' placeholder='John Doe' className='w-full outline-none' value={data.name} onChange={handleOnChange}/>
         </div>
         
-        <label htmlFor="email" className='font-serif my-2'>Your Email:</label>
+        <label htmlFor="email" className='font-serif mt-4'>Your Email:</label>
         <div className='flex items-center w-full border  rounded-full py-2 px-3'>
               <span>
               <MdEmail className="text-md " />
@@ -92,9 +92,10 @@ const Register = () => {
               <input type='email' name='email' placeholder='johndoe@gmail.com' className=' w-full outline-none' value={data.email} onChange={handleOnChange}/>  
          </div>
          
-         <div className=" my-2 flex flex-col items-center">
-          <span className=' rounded-full py-2 px-2 w-full my-1'>
-          <select className='w-full border rounded' id='degree' name='degree' onChange={handleOnChange} value={data.degree}>
+        
+          <div className="mt-4 w-full">
+          <span className=' rounded-full w-full'>
+          <select className='w-full border py-2 px-2 rounded' id='degree' name='degree' onChange={handleOnChange} value={data.degree}>
           <option value={"other"} className='text-sm text-gray-500'>Select Degree</option>
           <option value={"diploma"}>Diploma</option>
           <option value={"bachelors"}>Bachelors</option>
@@ -102,8 +103,10 @@ const Register = () => {
           <option value={"phd"}>Phd</option>
           </select>
           </span>
+          </div>
+          <div className=" mt-4 w-full">
           <span className=' rounded-full w-full'>
-          <select className='w-full border py-2 px-2 my-1 rounded' id='course' name='course' onChange={handleOnChange} value={data.course}>
+          <select className='w-full border py-2 px-2 rounded' id='course' name='course' onChange={handleOnChange} value={data.course}>
           <option value={"other"} className='text-sm text-gray-500'>Select Course</option>
           <option value={"arts & commerce"}>Arts & Commerce</option>
           <option value={"computer"}>Computer</option>
@@ -115,9 +118,9 @@ const Register = () => {
           </select>
           </span>
          </div>
-         <div className=" my-2 w-full">
-         <span className='rounded-full py-2 px-2 w-full'>
-          <select className='w-full border rounded' id='altcourse' name='altcourse' onChange={handleOnChange} value={data.altcourse}>
+         <div className=" mt-4 w-full">
+         <span className='rounded-full  w-full'>
+          <select className='w-full border py-2 px-2 rounded' id='altcourse' name='altcourse' onChange={handleOnChange} value={data.altcourse}>
           <option value={"other"} className='text-sm text-gray-500'>Alternative Course</option>
           <option value={"arts & commerce"}>Arts & Commerce</option>
           <option value={"computer"}>Computer</option>
@@ -129,7 +132,7 @@ const Register = () => {
           </select>
           </span>
          </div>
-         <label htmlFor="phone" className='font-serif my-2 w-full '>Your Phone Number:</label>
+         <label htmlFor="phone" className='font-serif mt-4 w-full '>Your Phone Number:</label>
          <div className='flex items-center w-full border py-2 px-3  rounded-full'>
               <span>
               <AiFillPhone className="text-md " />
@@ -137,7 +140,7 @@ const Register = () => {
               <input type='text' name='phone' placeholder='+263 234567891' className=' w-full outline-none' value={data.phone} onChange={handleOnChange}/>  
          </div>
          
-         <label htmlFor="guardian" className='font-serif  my-2'>Name of Guardian: </label>
+         <label htmlFor="guardian" className='font-serif  mt-4'>Name of Guardian: </label>
          <div className='flex items-center w-full border py-2 px-3 rounded-full'>
               <span>
               <BiSolidUserPin className="text-md " />
@@ -145,7 +148,7 @@ const Register = () => {
               <input type='text' name='guardian' placeholder='Name of Guardian' className=' w-full outline-none' value={data.guardian} onChange={handleOnChange}/>  
          </div>
          
-         <label htmlFor="Gnumber" className='font-serif my-2'>Guardian's Number:</label>
+         <label htmlFor="Gnumber" className='font-serif mt-4'>Guardian's Number:</label>
          <div className='flex items-center w-full border py-2 px-3 rounded-full'>
               <span>
               <AiFillPhone className="text-md " />
@@ -153,7 +156,7 @@ const Register = () => {
               <input type='text' name='Gnumber' placeholder='+263 123456789' className=' w-full outline-none' value={data.Gnumber} onChange={handleOnChange}/>  
          </div>
          
-         <label htmlFor="agent" className='font-serif '>Who reffered you? </label>
+         <label htmlFor="agent" className='font-serif mt-4'>Who reffered you? </label>
          <div className='flex items-center w-full border py-2 px-3 rounded-full'>
               <span>
               <MdSupportAgent className="text-md " />
@@ -161,7 +164,7 @@ const Register = () => {
               <input type='text' name='agent' placeholder='Nomagugu Gumede' className=' w-full outline-none' value={data.agent} onChange={handleOnChange}/>  
          </div>
         
-         <label htmlFor="password" className='font-serif my-2 '>Password:</label>
+         <label htmlFor="password" className='font-serif mt-4 '>Password:</label>
         <div className='flex items-center w-full border mb-2 py-2 px-3 rounded-full'> 
         <span>
           <BiSolidLockAlt/>
