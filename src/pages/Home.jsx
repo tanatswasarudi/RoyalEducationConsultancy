@@ -29,7 +29,7 @@ const Home = () => {
   const nextProduct = () => {
     const isLastImage = currentPic === slides.length -1;
     const newIndex = isLastImage ? 0 : currentPic + 1;
-    setCurrentPic(newInd)
+    setCurrentPic(newIndex)
   }
 //pictures of Europe
   const prevSlide = () => {
@@ -68,7 +68,7 @@ const Home = () => {
           <button onClick={prevProduct} className='bg-slate-300 hover:bg-slate-400 text-lg p-1'><BsArrowLeftShort/></button>
           <button onClick={nextProduct} className='bg-slate-300 hover:bg-slate-400 text-lg p-1'><BsArrowRightShort/></button>
         </div>
-      <div className="w-full m-auto py-16 px-4 relative max-w-[500px] md:h-[500px] h-[300px] group ">
+      <div className="w-full m-auto px-4 relative max-w-[500px] md:h-[500px] h-[300px]">
         <div style={{backgroundImage: `url(${slides[currentPic]})`}} className="w-full h-full rounded-2xl bg-center bg-cover duration-500"></div>
       </div>
     </div>
