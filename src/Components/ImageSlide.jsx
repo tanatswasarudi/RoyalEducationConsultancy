@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import img1 from '../Assets/europe.jpg';
 import img2 from '../Assets/europe2.jpg';
 import img3 from '../Assets/europe3.jpg';
-import img4 from '../Assets/scholar4.jpg';
+import img4 from '../Assets/scholar.jpg';
 import img5 from '../Assets/scholarships.png';
 import img6 from '../Assets/scholarships2.png';
 
