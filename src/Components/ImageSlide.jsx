@@ -20,8 +20,8 @@ const ImageSlide = () => {
   };
 
   return (
-    <div className="">
-      <div className="w-full h-64">
+    <div className="w-full">
+      <div className="w-full h-[360px]">
         <img
           src={images[currentIndex]}
           alt={`Image ${currentIndex + 1}`}

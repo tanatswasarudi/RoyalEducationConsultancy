@@ -52,7 +52,7 @@ const AgentRegistration = () => {
 
   return (
     <div>
-      <div className="w-full h-[300px]"><img src={img6} alt="" className='w-full h-full' /></div>
+      <div className="w-full h-[300px] md:h-[400px]"><img src={img6} alt="" className='w-full h-full' /></div>
       <div className="mx-auto max-w-md pt-10 mb-6">
       <form className='flex flex-col' onSubmit={handleSubmit}>
       <label htmlFor='name' className='px-3 font-serif'>Full Name</label>
