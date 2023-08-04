@@ -146,7 +146,7 @@ const Register = () => {
               </select>
             </span>
           </div>
-          <span className=' mt-6'>
+          <span className='mt-6'>
             <select className='py-2 px-3 border border-blue-700 rounded-full w-full' onChange={handleOnChange}value={data.altcourse}>
           <option value={"other"}>Alternative Course</option>
           <option value={"Arts & Commerce"}>Arts & Commerce</option>

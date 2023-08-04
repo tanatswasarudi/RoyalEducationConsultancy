@@ -38,7 +38,7 @@ const Home = () => {
         <img
           src={images[currentIndex]}
           alt={`Image ${currentIndex + 1}`}
-          className="w-full h-full"
+          className="w-full h-full object-cover"
         />
       </div>
       <div className="flex justify-center mt-4">
