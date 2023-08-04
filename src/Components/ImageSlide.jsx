@@ -21,11 +21,11 @@ const ImageSlide = () => {
 
   return (
     <div className="w-full">
-      <div className="w-full h-[360px]">
+      <div className="w-full md:h-[360px] h-[300px] ">
         <img
           src={images[currentIndex]}
           alt={`Image ${currentIndex + 1}`}
-          className="w-full h-full"
+          className="w-full h-full object-cover"
         />
       </div>
       <div className="flex justify-center mt-4">
