@@ -31,6 +31,12 @@ const ImageSlide = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
   };
 
+  const containerStyle = {
+    position: 'relative',
+    width: '100%',
+    minHeight: '400px', // Set a minimum height of 400px for the container
+  };
+
   const imageStyle = {
     width: '100%',
     height: isMobile ? '200px' : '300px', // Adjust the height for mobile and desktop views.
@@ -39,12 +45,11 @@ const ImageSlide = () => {
 
   return (
     <div className="w-full">
-      <div className="w-full  h-[400px] ">
+      <div style={containerStyle}>
         <img
           src={images[currentIndex]}
           alt={`Image ${currentIndex + 1}`}
           style={imageStyle}
-          className=''
         />
       </div>
       <div className="flex justify-center mt-4">
