@@ -34,11 +34,11 @@ const Home = () => {
   return (
     <div className='flex flex-col items-center'>
       <div className="">
-      <div className="w-full md:h-[360px] h-[300px] ">
+      <div className="min-w-full md:h-[360px] h-[300px] ">
         <img
           src={images[currentIndex]}
           alt={`Image ${currentIndex + 1}`}
-          className="w-full h-full object-cover"
+          className="min-w-[calc(100vh)] h-full object-cover"
         />
       </div>
       <div className="flex justify-center mt-4">
