@@ -33,19 +33,21 @@ const ImageSlide = () => {
 
   const imageStyle = {
     width: '100%',
-    height: isMobile ? 'auto' : '300px', // Adjust the height for mobile and non-mobile views.
-    objectFit: 'cover',
+    height: isMobile ? 'auto' : '100%', 
+    objectFit: isMobile ? 'cover' : 'contain', 
   };
+  
 
   return (
     <div className="w-full">
-      <div className="w-full md:h-[360px] h-[300px] ">
+      <div className={`w-full ${isMobile ? '' : 'md:h-[360px] h-[300px]'}`}>
         <img
-          src={images[currentIndex]}
-          alt={`Image ${currentIndex + 1}`}
-          style={imageStyle}
-        />
-      </div>
+         src={images[currentIndex]}
+        alt={`Image ${currentIndex + 1}`}
+        style={imageStyle}
+      />
+         </div>
+
       <div className="flex justify-center mt-4">
         <button onClick={prevImage} className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 ml-auto">
           Prev
