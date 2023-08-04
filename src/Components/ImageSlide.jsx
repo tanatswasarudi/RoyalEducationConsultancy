@@ -6,7 +6,7 @@ import img4 from '../Assets/scholar.jpg';
 import img5 from '../Assets/scholarships.png';
 import img6 from '../Assets/scholarships2.png';
 
-const images =[img1, img2 , img3, img4, img5, img6]
+const images = [img1, img2, img3, img4, img5, img6];
 
 const ImageSlide = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -14,24 +14,37 @@ const ImageSlide = () => {
   const prevImage = () => {
     setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
   };
+
   const nextImage = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
   };
 
+  const imageStyle = {
+    width: '100%',
+    height: '100%', 
+    objectFit: 'contain', 
+  };
+
   return (
     <div className="w-full">
-      <div className="md:w-full md:h-[360px] h-[300px] ">
+      <div className="md:w-full md:h-[360px] h-[300px]">
         <img
           src={images[currentIndex]}
           alt={`Image ${currentIndex + 1}`}
-          className="w-full h-full object-cover"
+          style={imageStyle}
         />
       </div>
       <div className="flex justify-center mt-4">
-        <button onClick={prevImage} className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 ml-auto">
+        <button
+          onClick={prevImage}
+          className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 ml-auto"
+        >
           Prev
         </button>
-        <button onClick={nextImage} className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4">
+        <button
+          onClick={nextImage}
+          className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4"
+        >
           Next
         </button>
       </div>
