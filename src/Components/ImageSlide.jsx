@@ -1,27 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import img1 from '../Assets/europe.jpg';
-import img2 from '../Assets/europe2.jpg';
-import img3 from '../Assets/europe3.jpg';
-import img4 from '../Assets/scholar.jpg';
-import img5 from '../Assets/scholarships.png';
-import img6 from '../Assets/scholarships2.png';
+import React, { useState } from 'react';
 
-const images = [img1, img2, img3, img4, img5, img6];
-
-const ImageSlide = () => {
+const ImageSlide = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-
-    window.addEventListener('resize', handleResize);
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
 
   const prevImage = () => {
     setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
@@ -31,38 +11,23 @@ const ImageSlide = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
   };
 
-  const containerStyle = {
-    position: 'relative',
-    width: '100%',
-    minHeight: '400px', // Set a minimum height of 400px for the container
-  };
-
-  const imageStyle = {
-    width: '100%',
-    height: isMobile ? '200px' : '300px', // Adjust the height for mobile and desktop views.
-    objectFit: 'cover',
-  };
-
   return (
-    <div className="w-full">
-      <div style={containerStyle}>
-        <img
-          src={images[currentIndex]}
-          alt={`Image ${currentIndex + 1}`}
-          style={imageStyle}
-        />
+    <div className="image-slider w-full">
+      <div className="slider-container h-400 overflow-hidden">
+        {images.map((image, index) => (
+          <img
+            key={index}
+            src={image}
+            alt={`Image ${index + 1}`}
+            className={`slide ${index === currentIndex ? 'active' : ''}`}
+          />
+        ))}
       </div>
-      <div className="flex justify-center mt-4">
-        <button
-          onClick={prevImage}
-          className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 ml-auto"
-        >
+      <div className="navigation-buttons flex justify-center mt-4">
+        <button onClick={prevImage} className="nav-button prev bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 mr-2">
           Prev
         </button>
-        <button
-          onClick={nextImage}
-          className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4"
-        >
+        <button onClick={nextImage} className="nav-button next bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4">
           Next
         </button>
       </div>

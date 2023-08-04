@@ -7,8 +7,17 @@ import img5 from '../Assets/student5.jpg';
 import img6 from '../Assets/student6.jpg';
 import {GrNext,GrPrevious} from 'react-icons/gr' 
 import ImageSlide from '../Components/ImageSlide';
+import img1 from '../Assets/europe.jpg';
+import img2 from '../Assets/europe2.jpg';
+import img3 from '../Assets/europe3.jpg';
+import img4 from '../Assets/scholar.jpg';
+import img5 from '../Assets/scholarships.png';
+import img6 from '../Assets/scholarships2.png';
+
+
 
 const Home = () => {
+  const images = [img1, img2, img3, img4, img5, img6];
   const slideProductRef = useRef()
   const nextProduct = ()=>{
     slideProductRef.current.scrollLeft += 200 
@@ -19,8 +28,7 @@ const Home = () => {
  
   return (
     <div className='flex flex-col items-center'>
-      <div className="md:mt-2"><ImageSlide/></div>
-      
+       <ImageSlide images={images} />
       <h1 className='text-blue-900 text-2xl px-2 font-sans font-semibold mt-10 mb-4 mr-auto'>Our Gallery</h1>
       <div className='ml-auto flex gap-4 mb-2'>
           <button onClick={prevProduct} className='bg-slate-300 hover:bg-slate-400 text-lg p-1'><GrPrevious/></button>
