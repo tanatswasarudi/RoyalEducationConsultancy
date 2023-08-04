@@ -1,5 +1,4 @@
-import React, { useRef } from 'react'
-import ImageSlide from '../Components/ImageSlide'
+import React, { useRef,useState  } from 'react'
 import img1 from '../Assets/student.jpg';
 import img2 from '../Assets/student2.jpg';
 import img3 from '../Assets/student3.jpg';
@@ -7,6 +6,12 @@ import img4 from '../Assets/student4.jpg';
 import img5 from '../Assets/student5.jpg';
 import img6 from '../Assets/student6.jpg';
 import {GrNext,GrPrevious} from 'react-icons/gr' 
+import imgg1 from '../Assets/europe.jpg';
+import imgg2 from '../Assets/europe2.jpg';
+import imgg3 from '../Assets/europe3.jpg';
+import imgg4 from '../Assets/scholar.jpg';
+import imgg5 from '../Assets/scholarships.png';
+import imgg6 from '../Assets/scholarships2.png';
 
 const Home = () => {
   const slideProductRef = useRef()
@@ -16,11 +21,35 @@ const Home = () => {
   const prevProduct = ()=>{
     slideProductRef.current.scrollLeft -= 200
   }
+  const images =[imgg1, imgg2 , imgg3, imgg4, imgg5, imgg6]
+
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const prevImage = () => {
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
+  };
+  const nextImage = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+  };
   return (
     <div className='flex flex-col items-center'>
-      <div className="my-1 w-full">
-        <ImageSlide/>
+      <div className="">
+      <div className="w-full md:h-[360px] h-[300px] ">
+        <img
+          src={images[currentIndex]}
+          alt={`Image ${currentIndex + 1}`}
+          className="w-full h-full"
+        />
       </div>
+      <div className="flex justify-center mt-4">
+        <button onClick={prevImage} className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 ml-auto">
+          Prev
+        </button>
+        <button onClick={nextImage} className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4">
+          Next
+        </button>
+      </div>
+    </div>
       <h1 className='text-blue-900 text-2xl px-2 font-sans font-semibold mt-10 mb-4 mr-auto'>Our Gallery</h1>
       <div className='ml-auto flex gap-4 mb-2'>
           <button onClick={prevProduct} className='bg-slate-300 hover:bg-slate-400 text-lg p-1'><GrPrevious/></button>
