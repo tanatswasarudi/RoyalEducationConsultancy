@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import img1 from '../Assets/europe.jpg';
 import img2 from '../Assets/europe2.jpg';
 import img3 from '../Assets/europe3.jpg';
@@ -10,6 +10,18 @@ const images = [img1, img2, img3, img4, img5, img6];
 
 const ImageSlide = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   const prevImage = () => {
     setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
@@ -21,13 +33,13 @@ const ImageSlide = () => {
 
   const imageStyle = {
     width: '100%',
-    height: '100%', 
-    objectFit: 'contain', 
+    height: isMobile ? '200px' : '300px', // Adjust the height for mobile and desktop views.
+    objectFit: 'cover',
   };
 
   return (
     <div className="w-full">
-      <div className="md:w-full md:h-[360px] h-[300px]">
+      <div className="w-full  h-[400px] ">
         <img
           src={images[currentIndex]}
           alt={`Image ${currentIndex + 1}`}
