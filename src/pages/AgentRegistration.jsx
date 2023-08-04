@@ -3,7 +3,7 @@ import { MdEmail } from "react-icons/md";
 import { toast } from "react-toastify"
 import {FaUserTie} from 'react-icons/fa'
 import {AiFillPhone} from 'react-icons/ai'
-import img6 from '../Assets/study.png';
+import img6 from '../Assets/reg.jpg';
 
 const AgentRegistration = () => {
     const [data, setData] = useState({

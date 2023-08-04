@@ -45,11 +45,11 @@ const Header = () => {
            </div>  
            <div className="flex items-center gap-3 md:gap-7 ">
            <div className="hidden md:flex gap-4 md:gap-6 text-base text-cyan-500 md:text-lg">
-           <Link to='/'>Home</Link>
-           <Link to='/Courses'>Courses</Link>
-           <Link to='/About'>About</Link>
-           <Link to='/Scholarships'>Scholarships</Link>
-           <Link to='/AgentRegistration'>Join Our Team</Link>
+           <Link to='/' className='hover:text-cyan-800 font-mono font-semibold'>Home</Link>
+           <Link to='/Courses' className='hover:text-cyan-800 font-mono font-semibold'>Courses</Link>
+           <Link to='/About' className='hover:text-cyan-800 font-mono font-semibold'>About</Link>
+           <Link to='/Scholarships' className='hover:text-cyan-800 font-mono font-semibold'>Scholarships</Link>
+           <Link to='/AgentRegistration' className='hover:text-cyan-800 font-mono font-semibold'>Join Our Team</Link>
             </div>
             <div className="flex items-center cursor-pointer gap-2 rounded-full border border-gray-300 py-2 px-4 shadow-md shadow-gray-300 " onClick={handleShowMenu}>
                <GiHamburgerMenu className='text-2xl' /> 

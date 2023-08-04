@@ -21,8 +21,8 @@ const Home = () => {
       <div className="w-full overflow-scroll scrollbar-none">
         <ImageSlide/>
       </div>
-      <h1 className='text-blue-900 text-xl font-sans font-semibold mt-10 mb-4 mr-auto'>Our Gallery</h1>
-      <div className='ml-auto flex gap-4'>
+      <h1 className='text-blue-900 text-2xl px-2 font-sans font-semibold mt-10 mb-4 mr-auto'>Our Gallery</h1>
+      <div className='ml-auto flex gap-4 mb-2'>
           <button onClick={prevProduct} className='bg-slate-300 hover:bg-slate-400 text-lg p-1'><GrPrevious/></button>
           <button onClick={nextProduct} className='bg-slate-300 hover:bg-slate-400 text-lg p-1'><GrNext/></button>
         </div>
