@@ -19,59 +19,37 @@ const Home = () => {
   const images = [img1, img2, img3, img4, img5, img6];
   const slides = [imgg1, imgg2, imgg3, imgg4, imgg5, imgg6]
   const [currentIndex, setCurrentIndex] = useState(0)
-  const [currentPic, setCurrentPic] = useState(0)
-  //Student Pictures
-  const prevProduct = () => {
-    const isFirstImage = currentPic === 0;
-    const newInd = isFirstImage ? slides.length - 1 : currentPic -1;
-    setCurrentPic(newInd);
-  }
-  const nextProduct = () => {
-    const isLastImage = currentPic === slides.length -1;
-    const newIndex = isLastImage ? 0 : currentPic + 1;
-    setCurrentPic(newIndex)
-  }
-//pictures of Europe
   const prevSlide = () => {
     const isFirstSlide = currentIndex === 0;
-    const newIndex = isFirstSlide ? images.length - 1 : currentIndex -1;
-    setCurrentIndex(newIndex);
+    const newIndex = isFirstSlide ? slides.length -1 : currentIndex - 1;
+    setCurrentIndex(newIndex)
   }
   const nextSlide = () => {
-    const isLastSlide = currentIndex === images.length -1;
+    const isLastSlide = currentIndex === slides.length - 1;
     const newIndex = isLastSlide ? 0 : currentIndex + 1;
     setCurrentIndex(newIndex)
   }
-  const gotoSlide = (imageIndex) => {
-    setCurrentIndex(imageIndex);
+  const goToSlide = (slideIndex)=>{
+    setCurrentIndex(slideIndex)
   }
- 
+
   return (
     <div className="">
-      <div className='object-cover md:max-w-[1500px] md:h-[440px] h-[300px] w-full group'>
-      <div style={{backgroundImage: `url(${images[currentIndex]})`}} className="w-full h-full rounded-2xl bg-center bg-cover duration-500"></div>
-        <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 rounded-full p-2 bg-black/20 text-white cursor-pointer ">
-          <GrPrevious onClick={prevSlide} className='text-2xl'/>
-        </div>
-        <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 rounded-full p-2 bg-black/20 text-white cursor-pointer ">
-          <GrNext onClick={nextSlide} className='text-2xl'/>
-        </div>
-        <div className="flex top-4 justify-center py-2">
-          {images.map((image,imageIndex)=>(
-            <div key={imageIndex} onClick={() => gotoSlide(imageIndex)} className="text-2xl cursor-pointer"><RxDotFilled/></div>
-          ))}
-        </div>
-      
+      <div className="md:max-w-[1400px] md:h-[780px] h-[300px] w-full m-auto py-16 px-4 relative group">
+        <div style={{backgroundImage: `url(${slides})`}} className="w-full h-full rounded-2xl bg-center bg-cover duration-500"></div>
+     <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[50%] left-5 text-2xl rounded-full p-2 bg-black/25 text-white cursor-pointer">
+      <BsArrowLeftShort onClick={prevSlide} size={30}/></div>
+     <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[50%] left-5 text-2xl rounded-full p-2 bg-black/25 text-white cursor-pointer">
+      <BsArrowRightShort onClick={nextSlide} size={30}/></div>
+      <div className="flex top-3 justify-center">
+      {slides.map((slide,slideIndex)=>(
+        <div key={slideIndex} onClick={()=>goToSlide(slideIndex)} className=""><RxDotFilled className='text-2xl'/></div>
+      ))}
+     </div>
+     </div>
+    
     </div>
-      <h1 className='text-2xl text-blue-500 mr-auto'>Our Gallery</h1> 
-         <div className='ml-auto flex gap-4'>
-          <button onClick={prevProduct} className='bg-slate-300 hover:bg-slate-400 text-lg p-1'><BsArrowLeftShort/></button>
-          <button onClick={nextProduct} className='bg-slate-300 hover:bg-slate-400 text-lg p-1'><BsArrowRightShort/></button>
-        </div>
-      <div className="w-full m-auto px-4 relative max-w-[500px] md:h-[500px] h-[300px]">
-        <div style={{backgroundImage: `url(${slides[currentPic]})`}} className="w-full h-full rounded-2xl bg-center bg-cover duration-500"></div>
-      </div>
-    </div>
+    
     
   )
 }
