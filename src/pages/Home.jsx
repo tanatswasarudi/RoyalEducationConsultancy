@@ -6,6 +6,7 @@ import img3 from '../Assets/student3.jpg';
 import img4 from '../Assets/student4.jpg';
 import img5 from '../Assets/student5.jpg';
 import img6 from '../Assets/student6.jpg';
+import {GrNext,GrPrevious} from 'react-icons/gr' 
 
 const Home = () => {
   const slideProductRef = useRef()
