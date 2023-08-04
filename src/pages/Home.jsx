@@ -18,7 +18,7 @@ const Home = () => {
   }
   return (
     <div className='flex flex-col items-center'>
-      <div className="w-full overflow-scroll scrollbar-none">
+      <div className="my-1">
         <ImageSlide/>
       </div>
       <h1 className='text-blue-900 text-2xl px-2 font-sans font-semibold mt-10 mb-4 mr-auto'>Our Gallery</h1>
