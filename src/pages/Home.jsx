@@ -35,8 +35,8 @@ const Home = () => {
 
   return (
     <div className="">
-      <div className="md:max-w-[1400px] md:h-[780px] h-[300px] w-full m-auto py-16 px-4 relative group">
-        <div style={{backgroundImage: `url(${slides[currentIndex]})`}} className="w-full h-[400px] md:h-[780px]  rounded-2xl bg-center bg-cover duration-500"></div>
+      <div className="md:max-w-[1400px] md:h-[500px] h-[300px] w-full m-auto px-4 relative group">
+        <div style={{backgroundImage: `url(${slides[currentIndex]})`}} className="w-full h-[400px] md:h-[500px]  rounded-2xl bg-center bg-cover duration-500"></div>
      <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[50%] left-5 text-2xl rounded-full p-2 bg-black/25 text-white cursor-pointer">
       <BsArrowLeftShort onClick={prevSlide} size={30}/></div>
      <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[50%] right-5 text-2xl rounded-full p-2 bg-black/25 text-white cursor-pointer">
