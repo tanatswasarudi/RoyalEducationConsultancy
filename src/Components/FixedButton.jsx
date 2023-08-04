@@ -6,7 +6,7 @@ const FixedButton = () => {
     <button
       className="fixed bottom-4 cursor pointer right-4 p-4 bg-blue-500 text-white rounded-full shadow-lg"
     >
-    <Link to='register'>Apply Now to See Offers</Link>
+    <Link to='register'>Apply Now</Link>
     </button>
   );
 };
