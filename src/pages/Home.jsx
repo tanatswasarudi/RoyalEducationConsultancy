@@ -1,12 +1,13 @@
-import React, { useRef } from 'react'
-import img1 from '../Assets/student.jpg';
-import img2 from '../Assets/student2.jpg';
-import img3 from '../Assets/student3.jpg';
-import img4 from '../Assets/student4.jpg';
-import img5 from '../Assets/student5.jpg';
-import img6 from '../Assets/student6.jpg';
+import React, { useState} from 'react'
+import imgg1 from '../Assets/student.jpg';
+import imgg2 from '../Assets/student2.jpg';
+import imgg3 from '../Assets/student3.jpg';
+import imgg4 from '../Assets/student4.jpg';
+import imgg5 from '../Assets/student5.jpg';
+import imgg6 from '../Assets/student6.jpg';
 import {GrNext,GrPrevious} from 'react-icons/gr' 
-import ImageSlide from '../Components/ImageSlide';
+import {RxDotFilled} from 'react-icons/rx'
+import {BsArrowLeftShort,BsArrowRightShort} from 'react-icons/bs'
 import img1 from '../Assets/europe.jpg';
 import img2 from '../Assets/europe2.jpg';
 import img3 from '../Assets/europe3.jpg';
@@ -14,38 +15,63 @@ import img4 from '../Assets/scholar.jpg';
 import img5 from '../Assets/scholarships.png';
 import img6 from '../Assets/scholarships2.png';
 
-
-
 const Home = () => {
   const images = [img1, img2, img3, img4, img5, img6];
-  const slideProductRef = useRef()
-  const nextProduct = ()=>{
-    slideProductRef.current.scrollLeft += 200 
+  const slides = [imgg1, imgg2, imgg3, imgg4, imgg5, imgg6]
+  const [currentIndex, setCurrentIndex] = useState(0)
+  const [currentPic, setCurrentPic] = useState(0)
+  const prevProduct = () => {
+    const isFirstSlide = currentIndex === 0;
+    const newIndex = isFirstSlide ? images.length - 1 : currentIndex -1;
+    setCurrentIndex(newIndex);
   }
-  const prevProduct = ()=>{
-    slideProductRef.current.scrollLeft -= 200
+  const nextProduct = () => {
+    const isLastSlide = currentIndex === images.length -1;
+    const newIndex = isLastSlide ? 0 : currentIndex + 1;
+    setCurrentIndex(newIndex)
+  }
+
+  const prevSlide = () => {
+    const isFirstSlide = currentIndex === 0;
+    const newIndex = isFirstSlide ? images.length - 1 : currentIndex -1;
+    setCurrentIndex(newIndex);
+  }
+  const nextSlide = () => {
+    const isLastSlide = currentIndex === images.length -1;
+    const newIndex = isLastSlide ? 0 : currentIndex + 1;
+    setCurrentIndex(newIndex)
+  }
+  const gotoSlide = (imageIndex) => {
+    setCurrentIndex(imageIndex);
   }
  
   return (
-    <div className='flex flex-col items-center'>
-       <ImageSlide images={images} />
-      <h1 className='text-blue-900 text-2xl px-2 font-sans font-semibold mt-10 mb-4 mr-auto'>Our Gallery</h1>
-      <div className='ml-auto flex gap-4 mb-2'>
-          <button onClick={prevProduct} className='bg-slate-300 hover:bg-slate-400 text-lg p-1'><GrPrevious/></button>
-          <button onClick={nextProduct} className='bg-slate-300 hover:bg-slate-400 text-lg p-1'><GrNext/></button>
+    <div className="">
+      <div className='object-cover h-[440px] w-full  group'>
+      <div style={{backgroundImage: `url(${images[currentIndex]})`}} className="w-full h-full rounded-2xl bg-center bg-cover duration-500"></div>
+        <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 rounded-full p-2 bg-black/20 text-white cursor-pointer ">
+          <GrPrevious onClick={prevSlide} className='text-2xl'/>
         </div>
-      <div className="flex gap-5 items-center w-full overflow-scroll scrollbar-none scroll-smooth transition-all'" ref={slideProductRef}>
-       <div className='min-w-[300px] max-w-[300px] shadow border-t border-primary bg-slate-200 rounded flex flex-col items-center px-2'><div className="min-w-[280px] max-w-[280px]"><img src={img1} alt="" className='w-full h-full' /></div></div> 
-       <div className='min-w-[300px] max-w-[300px] shadow border-t border-primary bg-slate-200 rounded flex flex-col items-center px-2'><div className="min-w-[280px] max-w-[280px]"><img src={img2} alt="" className='w-full h-full' /></div></div>
-       <div className='min-w-[300px] max-w-[300px] shadow border-t border-primary bg-slate-200 rounded flex flex-col items-center px-2'><div className="min-w-[280px] max-w-[280px]"><img src={img3} alt="" className='w-full h-full' /></div></div>
-       <div className='min-w-[300px] max-w-[300px] shadow border-t border-primary bg-slate-200 rounded flex flex-col items-center px-2'><div className="min-w-[280px] max-w-[280px]"><img src={img4} alt="" className='w-full h-full' /></div></div>
-       <div className='min-w-[300px] max-w-[300px] shadow border-t border-primary bg-slate-200 rounded flex flex-col items-center px-2'><div className="min-w-[280px] max-w-[280px]"><img src={img5} alt="" className='w-full h-full' /></div></div> 
-       <div className='min-w-[300px] max-w-[300px] shadow border-t border-primary bg-slate-200 rounded flex flex-col items-center px-2'><div className="min-w-[280px] max-w-[280px]"><img src={img6} alt="" className='w-full h-full' /></div></div>
-      </div>
-    <div className="mt-7">
+        <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 rounded-full p-2 bg-black/20 text-white cursor-pointer ">
+          <GrNext onClick={nextSlide} className='text-2xl'/>
+        </div>
+        <div className="flex top-4 justify-center py-2">
+          {images.map((image,imageIndex)=>(
+            <div key={imageIndex} onClick={() => gotoSlide(imageIndex)} className="text-2xl cursor-pointer"><RxDotFilled/></div>
+          ))}
+        </div>
       
     </div>
+      <h1 className='text-2xl text-blue-500 mr-auto'>Our Gallery</h1> 
+         <div className='ml-auto flex gap-4 mb-4'>
+          <button onClick={prevProduct} className='bg-slate-300 hover:bg-slate-400 text-lg p-1'><BsArrowLeftShort/></button>
+          <button onClick={nextProduct} className='bg-slate-300 hover:bg-slate-400 text-lg p-1'><BsArrowRightShort/></button>
+        </div>
+      <div className="w-full m-auto py-16 px-4 relative max-w-[1400px] h-[780px] group ">
+        <div style={{backgroundImage: `url(${slides[currentPic]})`}} className="w-full h-full rounded-2xl bg-center bg-cover duration-500"></div>
+      </div>
     </div>
+    
   )
 }
 
