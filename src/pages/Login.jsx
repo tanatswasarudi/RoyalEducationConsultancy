@@ -72,18 +72,20 @@ const Login = () => {
   return (
     <div className='mt-4 grow flex items-center justify-around'>
         <div className="mb-64">
-        <div className="w-20 h-20">
+        <div className="w-20 h-20 mx-auto">
           <img src={login} alt="" className='rounded-full w-full h-full' />
         </div>
       <form className='max-w-md mx-auto' onSubmit={handleSubmit}>
+      <label htmlFor='password' className='px-3 font-serif'>Email</label>
         <div className='flex items-center w-full border my-1 py-2 px-3 rounded-full'>
               <span>
               <MdEmail className="text-md " />
               </span>
               <input type='email' name='email' placeholder='johndoe@gmail.com' className=' w-full outline-none'value={data.email} onChange={handleOnChange}/>  
          </div>
+         <label htmlFor='password' className='px-3 mt-4 font-serif'>Password</label>
         <div className='flex items-center w-full border my-1 py-2 px-3 rounded-full'>
-        <span>
+        <span> 
           <BiSolidLockAlt/>
         </span> 
             <input   type={showPassword ? "text" : "password"} name='password' placeholder='*******' className=' w-full outline-none' value={data.password}onChange={handleOnChange}/>   
