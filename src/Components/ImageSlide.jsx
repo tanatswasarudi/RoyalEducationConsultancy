@@ -36,3 +36,4 @@ const ImageSlide = ({ images }) => {
 };
 
 export default ImageSlide;
+
