@@ -45,7 +45,7 @@ const Home = () => {
   }
   const slideStyles = {
     width : '100%',
-    heigh : '100%',
+    height : '100%',
     borderRadius: '10px',
     backgroundPosition: 'center',
     backgroundSize: 'cover',
@@ -90,8 +90,8 @@ const dotsContainerStyles = {
 }
   return (
     <div className="">
-      <div className="md:max-w-[1400px] max-w-[500px] md:h-[500px] h-[300px] w-full m-auto px-4 relative group">
-        <div style={{ backgroundImage: `url(${slides[currentIndex]})` }} className="w-auto h-[400px] md:h-[500px] rounded-2xl bg-center bg-cover duration-500"></div>
+      <div className=" md:h-[500px] h-[300px] w-full m-auto relative group">
+        <div style={{ backgroundImage: `url(${slides[currentIndex]})` }} className=" w-full h-full rounded-2xl duration-500"></div>
         <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[50%] left-5 text-2xl rounded-full p-2 bg-black/25 text-white cursor-pointer">
           <BsArrowLeftShort onClick={prevSlide} size={30} />
         </div>
@@ -104,9 +104,10 @@ const dotsContainerStyles = {
           ))}
         </div>
       </div>
-      <div style={containerStyles} className='slidercontainer'> 
-            <div style={sliderStyles}>
-               <div style={leftarrowStyles} ><BsArrowLeftShort onClick={goToPrevious} size={30}/></div>
+      <h1>Our Gallery</h1>
+      <div style={containerStyles} > 
+            <div style={sliderStyles} className=''>
+               <div style={leftarrowStyles} className='' ><BsArrowLeftShort onClick={goToPrevious} size={30}/></div>
                <div style={rightarrowStyles} ><BsArrowRightShort onClick={goToNext} size={30}/></div>
                <div style={slideStyles}></div>
                <div style={dotsContainerStyles}>
@@ -116,6 +117,7 @@ const dotsContainerStyles = {
                </div>
           </div>
       </div>
+      
     </div>
   )
 }
