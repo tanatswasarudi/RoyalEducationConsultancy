@@ -36,6 +36,9 @@ const Home = () => {
   const goToSlide = (slideIndex) => {
     setCurrentIndex(slideIndex);
   };
+  const goToImage = (imageIndex) => {
+    setCurrentIndigo(imageIndex);
+  };
   const sliderStyles = {
     height: '100%',
     position: 'relative'
@@ -81,9 +84,13 @@ const goToNext = () => {
   const newIndia = LastSlide ? 0 : currentIndigo + 1
   setCurrentIndigo(newIndia)
 }
+const dotsContainerStyles = {
+  display: "flex",
+  justifyConter: "center",
+}
   return (
     <div className="">
-      <div className="max-w-[1400px] md:h-[500px] h-[300px] w-full m-auto px-4 relative group">
+      <div className="md:max-w-[1400px] max-w-[500px] md:h-[500px] h-[300px] w-full m-auto px-4 relative group">
         <div style={{ backgroundImage: `url(${slides[currentIndex]})` }} className="w-auto h-[400px] md:h-[500px] rounded-2xl bg-center bg-cover duration-500"></div>
         <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[50%] left-5 text-2xl rounded-full p-2 bg-black/25 text-white cursor-pointer">
           <BsArrowLeftShort onClick={prevSlide} size={30} />
@@ -102,6 +109,11 @@ const goToNext = () => {
                <div style={leftarrowStyles} ><BsArrowLeftShort onClick={goToPrevious} size={30}/></div>
                <div style={rightarrowStyles} ><BsArrowRightShort onClick={goToNext} size={30}/></div>
                <div style={slideStyles}></div>
+               <div style={dotsContainerStyles}>
+                {images.map((image, imageIndex)=>(
+                  <div className='cursor-pointer' key={imageIndex} onClick={()=> goToImage}><RxDotFilled className='text-2xl'  /></div>
+                ))}
+               </div>
           </div>
       </div>
     </div>
