@@ -1,11 +1,6 @@
 import React, { useState } from 'react';
-import { GrNext, GrPrevious } from 'react-icons/gr';
 import { RxDotFilled } from 'react-icons/rx';
 import { BsArrowLeftShort, BsArrowRightShort } from 'react-icons/bs';
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from "react-responsive-carousel";
-import "../Styles/Home.css";
-
 import img1 from '../Assets/student.jpg';
 import img2 from '../Assets/student2.jpg';
 import img3 from '../Assets/student3.jpg';
@@ -21,6 +16,8 @@ import imgg6 from '../Assets/scholarships2.png';
 
 const Home = () => {
   const images = [img1, img2, img3, img4, img5, img6];
+  const [currentIndigo, setCurrentIndigo] = useState(0)
+
   const slides = [imgg1, imgg2, imgg3, imgg4, imgg5, imgg6];
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -39,7 +36,51 @@ const Home = () => {
   const goToSlide = (slideIndex) => {
     setCurrentIndex(slideIndex);
   };
-
+  const sliderStyles = {
+    height: '100%',
+    position: 'relative'
+  }
+  const slideStyles = {
+    width : '100%',
+    heigh : '100%',
+    borderRadius: '10px',
+    backgroundPosition: 'center',
+    backgroundSize: 'cover',
+    background: `url(${images[currentIndigo]})`
+  }
+const containerStyles = {
+  width: '500px',
+  height: '300px',
+  margin: '0 auto'
+}
+const leftarrowStyles = {
+  position : 'absolute',
+  top: "50%",
+  transform: "translate(0, -50%)",
+  left: "32px",
+  zIndex: "1",
+  cursor: "pointer",
+  color: "#fff",
+}
+const rightarrowStyles = {
+  position : 'absolute',
+  top: "50%",
+  transform: "translate(0, -50%)",
+  right: "32px",
+  zIndex: "1",
+  cursor: "pointer",
+  color: "#fff",
+}
+const goToPrevious = () => {
+  const FirstSlide = currentIndigo === 0
+  const newIndia = FirstSlide ? images.length - 1 : currentIndigo - 1;
+  setCurrentIndigo(newIndia)
+}
+const goToNext = () => {
+  const LastSlide = currentIndigo === images.length - 1 ;
+  const newIndia = LastSlide ? 0 : currentIndigo + 1
+  setCurrentIndigo(newIndia)
+}
   return (
     <div className="">
       <div className="max-w-[1400px] md:h-[500px] h-[300px] w-full m-auto px-4 relative group">
@@ -56,13 +97,13 @@ const Home = () => {
           ))}
         </div>
       </div>
-      <Carousel infiniteLoop autoPlay>
-        {images.map((image, index) => (
-          <div key={index}>
-            <img src={image} alt={`Slide ${index + 1}`} />
+      <div style={containerStyles} className='slidercontainer'> 
+            <div style={sliderStyles}>
+               <div style={leftarrowStyles} ><BsArrowLeftShort onClick={goToPrevious} size={30}/></div>
+               <div style={rightarrowStyles} ><BsArrowRightShort onClick={goToNext} size={30}/></div>
+               <div style={slideStyles}></div>
           </div>
-        ))}
-      </Carousel>
+      </div>
     </div>
   )
 }
