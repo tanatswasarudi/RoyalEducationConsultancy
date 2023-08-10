@@ -56,7 +56,8 @@ const Courses = () => {
       <div className="">
         <div className="">  
         <iframe 
-         className='md:w-500 w-280 md:h-400 h-240 '
+        width="md:500 300"
+        height="md:400 260"
          src="https://www.youtube.com/embed/p6m8eoJFaeI" 
           frameborder="0" 
          allowfullscreen
@@ -64,7 +65,8 @@ const Courses = () => {
          </iframe></div>
        <div className="mt-8">
        <iframe 
-         className='md:w-500 w-280 md:h-400 h-240 '
+         width="md:500 300"
+         height="md:400 260"
          src="https://www.youtube.com/embed?W3b9_zMEulA" 
           frameborder="0" 
          allowfullscreen

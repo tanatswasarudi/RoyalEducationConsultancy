@@ -23,7 +23,8 @@ const Scholaships = () => {
           </ul>
         </div>
       <div className="px-5">    <iframe 
-    className='md:w-500 w-280 md:h-400 h-240 '
+    width="md:500 300"
+    height="md:400 260"
     src="https://www.youtube.com/embed?v=GPRVlA6jIHI" 
     frameborder="0" 
     allowfullscreen
