@@ -11,6 +11,7 @@ import first from '../Assets/registration.png';
 import second from '../Assets/scholar2.jpg';
 import third from '../Assets/reg.jpg';
 import {HiAcademicCap} from 'react-icons/hi'
+import {Link} from 'react-router-dom'
 
 const Home = () => {
   const slides = [imgg1, imgg2, imgg3, imgg4, imgg5, imgg6];

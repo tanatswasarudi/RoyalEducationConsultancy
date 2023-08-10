@@ -8,7 +8,7 @@ import img4 from '../Assets/student4.jpg';
 import img5 from '../Assets/student5.jpg';
 import img6 from '../Assets/student6.jpg';
 import logo from '../Assets/Logo.jpg'
-import { RxDotFilled } from 'react-icons/rx';
+
 const About = () => {
   const images = [img1, img2, img3, img4, img5, img6];
   const [currentIndigo, setCurrentIndigo] = useState(0)
