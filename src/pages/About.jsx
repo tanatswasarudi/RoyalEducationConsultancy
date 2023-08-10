@@ -68,7 +68,7 @@ const goToNext = () => {
             <span className='flex items-center font-semibold mt-4'><RxDotFilled className='text-red-500'/>Partial Scholarship</span>
             </span>
             </div>
-            <div className="mt-5 grid-cols-3 grid gap-3">
+            <div className="mt-5 mb-5 grid-cols-3 grid gap-3">
               <div className="flex flex-col">
                 <span className='flex items-center'><span className='text-2xl text-blue-950'>10K</span><span className='text-red-500 text-xl'>+</span></span>
                 <span className='text-gray-500'>International Students</span>
@@ -82,9 +82,7 @@ const goToNext = () => {
                 <span className='text-gray-500'>Top Companies</span>
               </div>
             </div>
-            <div className="mt-5 mb-5">
-              <Link to='/' className='py-2 px-3 shadow flex items-center gap-4 bg-red-600'>Home <BsArrowRight className='text-xl text-white'/></Link>
-            </div>
+            
         </div>
       </div>
     </div>
