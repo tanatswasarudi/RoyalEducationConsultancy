@@ -79,11 +79,11 @@ const Home = () => {
               <button className='py-2 px-3 shadow flex items-center bg-red-600'>Know more <BsArrowRight className='text-xl text-white'/></button>
             </Link>
         </div>
-        <div className="px-3">
+        <div className="">
         <div className=""> 
         <iframe 
-            width="md:500 300"
-            height="md:400 260"
+            width="md:800 300"
+            height="md:700 260"
             src="https://www.youtube.com/embed?v=54wZjgTBfP4" 
             frameborder="0" 
             allowfullscreen
@@ -92,48 +92,31 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="mt-10 mx-auto w-full"><span className='text-lg text-blue-950 font-serif font-semibold'>OUR CAMPUSES</span></div>
-      <div className="mt-3 grid grid-cols-1 md:grid-cols-3 overflow-scroll scrollbar-none">
+      <div className="mt-10 px-3 mx-auto w-full"><span className='text-lg text-blue-950 font-serif font-semibold'>OUR CAMPUSES</span></div>
+      <div className="mt-3 px-3 grid grid-cols-1 md:grid-cols-3 gap-6 overflow-scroll scrollbar-none">
               <div className=""> <iframe 
-   width="md:500 300"
-   height="md:400 260"
+   width="md:650 300"
+   height="md:550 260"
     src="https://www.youtube.com/embed/8x1wEg9tPWQ" 
     frameborder="0" 
     allowfullscreen
   ></iframe></div>
               <div className=""> <iframe 
-    width="md:500 300"
-    height="md:400 260"
+    width="md:650 300"
+    height="md:550 260"
     src="https://www.youtube.com/embed/ftB0BsRM2y8" 
     frameborder="0" 
     allowfullscreen
   ></iframe></div>
               <div className=""> <iframe 
-  width="md:500 300"
-  height="md:400 260"
+  width="md:650 300"
+  height="md:550 260"
     src="https://www.youtube.com/embed/0ehNHUD4TU0" 
     frameborder="0" 
     allowfullscreen
   ></iframe></div>
       </div>
 
-      <div className="mt-10 mx-auto w-full"><span className='text-lg text-blue-950 font-serif font-semibold'>OUR GALLERY</span></div>
-      <div className="mt-3 grid grid-cols-1 md:grid-cols-2 gap-6 overflow-scroll scrollbar-none">
-              <div className=""> <iframe 
-   width="md:500 300"
-   height="md:400 260"
-    src="https://www.youtube.com/embed/1mhbMTfEQ94" 
-    frameborder="0" 
-    allowfullscreen
-  ></iframe></div>
-              <div className=""> <iframe 
-              width="md:500 300"
-              height="md:400 260"
-    src="https://www.youtube.com/embed/JDkAeiXWI4c" 
-    frameborder="0" 
-    allowfullscreen
-  ></iframe></div>
-      </div>
     </div>
   )
 }
