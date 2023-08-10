@@ -80,35 +80,36 @@ const Home = () => {
             </Link>
         </div>
         <div className="">
-        <div className=""><embed type="video/webm" src=" https://www.youtube.com/watch?v=54wZjgTBfP4" width="400" height="300"></embed></div>
+        <div className=""> 
+        <iframe 
+            width="400" 
+            height="300" 
+            src="https://www.youtube.com/watch?v=54wZjgTBfP4" 
+            frameborder="0" 
+            allowfullscreen
+            >
+          </iframe>
+          </div>
         </div>
       </div>
-      <div className="mt-10 px-3 md:px-10">
+      <div className="md:mt-14 mt-8 px-3 md:px-10">
         <span className='mx-auto'><h1 className='text-2xl text-blue-950 font-semibold'>STUDENT'S SERVICES</h1></span>
-        <div className="px-2 mt-5 grid md:grid-cols-2 grid-cols-1 gap-6 overflow-scroll scrollbar-none">
+        <div className="px-2 mt-6 grid md:grid-cols-2 grid-cols-1 gap-2 overflow-scroll scrollbar-none">
           
-          <div className="shadow rounded w-[400px] h-[500px] flex flex-col items-center bg-slate-100">
-          <span className='gap-3 mx-auto text-lg font-semibold mb-6 justify-center flex items-center'><HiAcademicCap className='text-blue-500'/> Study Visa</span>
+          <div className="shadow rounded w-[400px] h-[300px] flex flex-col items-center bg-slate-100">
+          <span className='gap-3 mx-auto text-lg font-semibold mb-6 mt-2 justify-center flex items-center'><HiAcademicCap className='text-blue-500'/> Study Visa</span>
           <p className='px-2 text-gray-500 font-serif'>We help our students get their Visas, prepare for IELTs as well as making CVs and we also provide flight booking service</p>
-          <Link to='/About' className="mt-5 px-2">
-              <button className='py-2 px-3 flex items-center'>Know more <BsArrowRight className='text-xl text-white'/></button>
-            </Link>
           </div>
           
-          <div className="shadow rounded w-[400px] h-[500px] flex flex-col items-center bg-slate-100">
-          <span className=' gap-3 mx-auto text-lg font-semibold mb-6 justify-center flex items-center'><HiAcademicCap className='text-blue-500'/> Internships</span>
+          <div className="shadow rounded w-[400px] h-[300px] flex flex-col items-center bg-slate-100">
+          <span className=' gap-3 mx-auto text-lg font-semibold mb-6 mt-2 justify-center flex items-center'><HiAcademicCap className='text-blue-500'/> Internships</span>
           <p className='px-2 text-gray-500 font-serif'>We make sure that our students get enrolled at institutions that are connected with the Top recruiters to help them with industrial exposure</p>
-          <Link to='/Scholarships' className="mt-5 px-2">
-              <button className='py-2 px-3 flex items-center'>Know more <BsArrowRight className='text-xl text-white'/></button>
-            </Link>
+          
           </div>
           
-          <div className="shadow rounded w-[400px] h-[500px] flex flex-col items-center bg-slate-100">  
-            <span className=' gap-3 mx-auto text-lg font-semibold mb-6 justify-center flex items-center'><HiAcademicCap className='text-blue-500'/> Scholarships</span>
+          <div className="shadow rounded w-[400px] h-[300px] flex flex-col items-center bg-slate-100">  
+            <span className=' gap-3 mx-auto text-lg font-semibold mb-6 mt-2 justify-center flex items-center'><HiAcademicCap className='text-blue-500'/> Scholarships</span>
            <p className='px-2 text-gray-500 font-serif'>We help our students avail the highest possible scholarship they can get to fund their higher studies as well as accommodation</p>
-           <Link to='/Scholarships' className="mt-5 px-2">
-              <button className='py-2 px-3 flex items-center'>Know more <BsArrowRight className='text-xl text-white'/></button>
-            </Link>
           </div>
           
         </div>

@@ -52,7 +52,17 @@ const Courses = () => {
           <li className='mt-3'></li>
         </ul>
       </div>
-      <div className=""><embed type="video/webm" src="https://www.youtube.com/watch?v=p6m8eoJFaeI" width="400" height="300"></embed></div>
+      <div className="">
+        <iframe 
+         width="400" 
+         height="300" 
+         src="https://www.youtube.com/embed/p6m8eoJFaeI" 
+          frameborder="0" 
+         allowfullscreen
+         >
+         </iframe>
+      </div>
+  
     </div>
     </div>
   )

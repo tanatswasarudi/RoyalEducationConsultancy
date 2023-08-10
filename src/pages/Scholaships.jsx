@@ -22,7 +22,14 @@ const Scholaships = () => {
             <li className='mt-3'>Students who clear their first semester tuition are eligible for <span className='text-red-500 font-bold'>FREE FLIGHT AND ACCOMODATION</span> during their first month</li>
           </ul>
         </div>
-      <div className=""><embed type="video/webm" src="https://www.youtube.com/watch?v=GPRVlA6jIHI" width="400" height="300"></embed></div>
+      <div className="">    <iframe 
+    width="400" 
+    height="300" 
+    src="https://www.youtube.com/watch?v=GPRVlA6jIHI" 
+    frameborder="0" 
+    allowfullscreen
+  ></iframe></div>
+  
       </div> 
     </div>
   )
