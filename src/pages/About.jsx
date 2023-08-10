@@ -1,6 +1,6 @@
 import React, { useState }  from 'react'
 import { RxDotFilled } from 'react-icons/rx';
-import { BsArrowLeftShort, BsArrowRightShort } from 'react-icons/bs';
+import { BsArrowLeftShort, BsArrowRightShort, BsArrowRight } from 'react-icons/bs';
 import img1 from '../Assets/student.jpg';
 import img2 from '../Assets/student2.jpg';
 import img3 from '../Assets/student3.jpg';
