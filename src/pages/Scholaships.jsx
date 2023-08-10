@@ -8,7 +8,7 @@ const Scholaships = () => {
       <div className="w-full h-[300px] md:h-[400px]">
         <img src={scholar} className='w-full h-full' alt="" />
       </div>
-      <div className=" mt-10 mb-6 grid md:grid-cols-2 grid-cols-1 gap-6 md:px-10 px-3">
+      <div className=" mt-10 mb-6 grid md:grid-cols-2 grid-cols-1 gap-6 md:px-10 px-3 overflow-scroll scrollbar-none">
         <div className="flex flex-col items-center">
           <strong className='font-serif text-2xl'><span>About <span className='text-blue-950 font-bold'>ROYAL</span> SCHOLARSHIPS</span></strong>
           <ul className=' mt-4 px-4 font-serif'>
@@ -23,8 +23,7 @@ const Scholaships = () => {
           </ul>
         </div>
       <div className="px-5">    <iframe 
-    width="500" 
-    height="400" 
+    className='md:w-500 w-280 md:h-400 h-240 '
     src="https://www.youtube.com/embed?v=GPRVlA6jIHI" 
     frameborder="0" 
     allowfullscreen

@@ -45,7 +45,7 @@ const Home = () => {
           ))}
         </div>
       </div>
-      <div className="mt-10 px-3 md:px-10 grid md:grid-cols-2 grid-cols-1 gap-6 mb-4">
+      <div className="mt-10 px-3 md:px-10 grid md:grid-cols-2 grid-cols-1 gap-6 mb-4 overflow-scroll scrollbar-none">
         <div className="">
           <p className='text-blue-950 font-serif text-2xl'>WHY CHOOSE US</p>
           <p className='mt-6 text-gray-500 font-semibold'>Royal Education Consultancy doesn't just specialize on scholarships to India, we are linked with a large number of universities in Europe in countries like Canada, Poland, Italy and Germany etc. We also provide support at every stage of the process, from accepting enrolment to the hassle-free arrival of students. </p>
@@ -61,7 +61,7 @@ const Home = () => {
             <span className='flex items-center font-semibold mt-4'><RxDotFilled className='text-red-500'/>Partial Scholarship</span>
             </span>
             </div>
-            <div className="mt-5 grid-cols-3 grid gap-3">
+            <div className="mt-5 grid-cols-3 grid gap-3 overflow-scroll scrollbar-none">
               <div className="flex flex-col">
                 <span className='flex items-center'><span className='text-2xl text-blue-950'>10K</span><span className='text-red-500 text-xl'>+</span></span>
                 <span className='text-gray-500'>International Students</span>
@@ -79,11 +79,10 @@ const Home = () => {
               <button className='py-2 px-3 shadow flex items-center bg-red-600'>Know more <BsArrowRight className='text-xl text-white'/></button>
             </Link>
         </div>
-        <div className="">
+        <div className="px-3">
         <div className=""> 
         <iframe 
-            width="500" 
-            height="400" 
+            className='md:w-500 w-280 md:h-400 h-240 '
             src="https://www.youtube.com/embed?v=54wZjgTBfP4" 
             frameborder="0" 
             allowfullscreen
@@ -92,43 +91,38 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="mt-10 justify-center"><span>OUR CAMPUSES</span></div>
-      <div className="mt-3 grid grid-cols-1 md:grid-cols-3">
+      <div className="mt-10 mx-auto w-full"><span className='text-lg text-blue-950 font-serif font-semibold'>OUR CAMPUSES</span></div>
+      <div className="mt-3 grid grid-cols-1 md:grid-cols-3 overflow-scroll scrollbar-none">
               <div className=""> <iframe 
-    width="400" 
-    height="300" 
+    className='md:w-500 w-280 md:h-400 h-240 '
     src="https://www.youtube.com/embed/8x1wEg9tPWQ" 
     frameborder="0" 
     allowfullscreen
   ></iframe></div>
               <div className=""> <iframe 
-    width="400" 
-    height="300" 
+    className='md:w-500 w-280 md:h-400 h-240 '
     src="https://www.youtube.com/embed/ftB0BsRM2y8" 
     frameborder="0" 
     allowfullscreen
   ></iframe></div>
               <div className=""> <iframe 
-    width="400" 
-    height="300" 
+   className='md:w-500 w-280 md:h-400 h-240 '
     src="https://www.youtube.com/embed/0ehNHUD4TU0" 
     frameborder="0" 
     allowfullscreen
   ></iframe></div>
       </div>
 
-      <div className="mt-10 justify-center"><span>OUR GALLERY</span></div>
-      <div className="mt-3 grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="mt-10 mx-auto w-full"><span className='text-lg text-blue-950 font-serif font-semibold'>OUR GALLERY</span></div>
+      <div className="mt-3 grid grid-cols-1 md:grid-cols-2 gap-6 overflow-scroll scrollbar-none">
               <div className=""> <iframe 
-    width="400" 
-    height="300" 
+    className='md:w-500 w-280 md:h-400 h-240 '
     src="https://www.youtube.com/embed/1mhbMTfEQ94" 
     frameborder="0" 
     allowfullscreen
   ></iframe></div>
               <div className=""> <iframe 
-    width="400" 
-    height="300" 
+    className='md:w-500 w-280 md:h-400 h-240 ' 
     src="https://www.youtube.com/embed/JDkAeiXWI4c" 
     frameborder="0" 
     allowfullscreen

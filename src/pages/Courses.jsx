@@ -8,7 +8,7 @@ const Courses = () => {
       <div className="w-full md:h-[400px] h-[300px]  ">
         <img src={Study} alt="" className='w-full h-full'/>
       </div>
-    <div className="mt-10 grid md:grid-cols-2 grid-cols-1 gap-6 md:px-10 px-3">
+    <div className="mt-10 grid md:grid-cols-2 grid-cols-1 gap-6 md:px-10 px-3 overflow-scroll scrollbar-none">
       <div className="flex flex-col items-center px-3">
           <p className='md:mt-10 mt-5 text-blue-950 text-lg font-semibold'>ADMISSIONS TO INDIA</p>
           <ul className=' px-4 mt-5'>
@@ -56,8 +56,7 @@ const Courses = () => {
       <div className="">
         <div className="">  
         <iframe 
-         width="500" 
-         height="400" 
+         className='md:w-500 w-280 md:h-400 h-240 '
          src="https://www.youtube.com/embed/p6m8eoJFaeI" 
           frameborder="0" 
          allowfullscreen
@@ -65,9 +64,8 @@ const Courses = () => {
          </iframe></div>
        <div className="mt-8">
        <iframe 
-         width="500" 
-         height="400" 
-         src="https://www.youtube.com/embed?v=W3b9_zMEulA" 
+         className='md:w-500 w-280 md:h-400 h-240 '
+         src="https://www.youtube.com/embed?W3b9_zMEulA" 
           frameborder="0" 
          allowfullscreen
          >
