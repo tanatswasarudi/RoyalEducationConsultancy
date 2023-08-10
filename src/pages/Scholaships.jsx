@@ -8,10 +8,10 @@ const Scholaships = () => {
       <div className="w-full h-[300px] md:h-[400px]">
         <img src={scholar} className='w-full h-full' alt="" />
       </div>
-      <div className=" mt-10 grid md:grid-cols-2 grid-cols-1 gap-6 md:px-10 px-3">
+      <div className=" mt-10 mb-6 grid md:grid-cols-2 grid-cols-1 gap-6 md:px-10 px-3">
         <div className="flex flex-col items-center">
           <strong className='font-serif text-2xl'><span>About <span className='text-blue-950 font-bold'>ROYAL</span> SCHOLARSHIPS</span></strong>
-          <ul className='flex flex-col items-center mt-4 px-4 text-black/20'>
+          <ul className=' mt-4 px-4 font-serif'>
             <li className='mt-3'>We offer both <span className='text-red-500 font-bold'>FULLY FUNDED AND PARTIAL</span></li>
             <li className='mt-3'>Application for partial scholarships to India is <span className='font-bold'>Free</span> i.e There is no <span className='font-bold'>Agent Fee.</span></li>
             <li className='mt-3'>To qualify for fully funded scholarships you have to write exams as well as prepare CVs and requires application fee which is <span className='font-bold'>non-refundable.</span></li>

@@ -7,9 +7,6 @@ import imgg3 from '../Assets/europe3.jpg';
 import imgg4 from '../Assets/scholar.jpg';
 import imgg5 from '../Assets/scholarships.png';
 import imgg6 from '../Assets/scholarships2.png';
-import first from '../Assets/registration.png';
-import second from '../Assets/scholar2.jpg';
-import third from '../Assets/reg.jpg';
 import {HiAcademicCap} from 'react-icons/hi'
 import {Link} from 'react-router-dom'
 
@@ -33,7 +30,9 @@ const Home = () => {
   return (
     <div className="">
       <div className=" w-full md:h-[400px] h-[300px] m-auto group">
-        <img src={ `url(${slides[currentIndex]})` } alt="" className=" w-full h-full rounded-2xl duration-500"/>
+        <div className=" w-full md:h-[400px] h-[300px]">
+             <div style={backgroundImage `url(${slides[currentIndex]})` } alt="" className=" w-full h-full rounded-2xl duration-500"></div>
+        </div>
         <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[50%] left-5 text-2xl rounded-full p-2 bg-black/25 text-white cursor-pointer">
           <BsArrowLeftShort onClick={prevSlide} size={30} />
         </div>
@@ -87,34 +86,29 @@ const Home = () => {
       <div className="mt-10 px-3 md:px-10">
         <span className='mx-auto'><h1 className='text-2xl text-blue-950 font-semibold'>STUDENT'S SERVICES</h1></span>
         <div className="px-2 mt-5 grid md:grid-cols-2 grid-cols-1 gap-6 overflow-scroll scrollbar-none">
-          <div className="shadow rounded max-w-md py-4">
-          <div style={{ backgroundImage: `url(${first})` }} className="w-full h-full" >
-          <span className=' gap-3 mx-auto text-lg font-semibold mb-6'><HiAcademicCap className='text-blue-500'/> Study Visa</span>
-          <p>We help our students get their Visas, prepare for IELTs as well as making CVs and we also provide flight booking service</p>
-          <Link to='/About' className="mt-5">
+          
+          <div className="shadow rounded w-[400px] h-[500px] flex flex-col items-center bg-slate-100">
+          <span className='gap-3 mx-auto text-lg font-semibold mb-6 justify-center flex items-center'><HiAcademicCap className='text-blue-500'/> Study Visa</span>
+          <p className='px-2 text-gray-500 font-serif'>We help our students get their Visas, prepare for IELTs as well as making CVs and we also provide flight booking service</p>
+          <Link to='/About' className="mt-5 px-2">
               <button className='py-2 px-3 flex items-center'>Know more <BsArrowRight className='text-xl text-white'/></button>
             </Link>
-          </div>
           </div>
           
-          <div className="shadow rounded max-w-md py-4 overflow-hidden">
-          <div style={{ backgroundImage: `url(${second})` }} className="w-full h-full flex flex-col items-center">
-          <span className=' gap-3 mx-auto text-lg font-semibold mb-6'><HiAcademicCap className='text-blue-500'/> Internships</span>
-          <p>We make sure that our students get enrolled at institutions that are connected with the Top recruiters to help them with industrial exposure</p>
-          <Link to='/Scholarships' className="mt-5">
+          <div className="shadow rounded w-[400px] h-[500px] flex flex-col items-center bg-slate-100">
+          <span className=' gap-3 mx-auto text-lg font-semibold mb-6 justify-center flex items-center'><HiAcademicCap className='text-blue-500'/> Internships</span>
+          <p className='px-2 text-gray-500 font-serif'>We make sure that our students get enrolled at institutions that are connected with the Top recruiters to help them with industrial exposure</p>
+          <Link to='/Scholarships' className="mt-5 px-2">
               <button className='py-2 px-3 flex items-center'>Know more <BsArrowRight className='text-xl text-white'/></button>
             </Link>
-          </div>
           </div>
           
-          <div className="shadow rounded max-w-md py-4">
-          <div style={{ backgroundImage: `url(${third})` }} className="w-full h-full flex flex-col items-center">
-            <span className=' gap-3 mx-auto text-lg font-semibold mb-6'><HiAcademicCap className='text-blue-500'/> Scholarships</span>
-           <p>We help our students avail the highest possible scholarship they can get to fund their higher studies as well as accommodation</p>
-           <Link to='/Scholarships' className="mt-5">
+          <div className="shadow rounded w-[400px] h-[500px] flex flex-col items-center bg-slate-100">  
+            <span className=' gap-3 mx-auto text-lg font-semibold mb-6 justify-center flex items-center'><HiAcademicCap className='text-blue-500'/> Scholarships</span>
+           <p className='px-2 text-gray-500 font-serif'>We help our students avail the highest possible scholarship they can get to fund their higher studies as well as accommodation</p>
+           <Link to='/Scholarships' className="mt-5 px-2">
               <button className='py-2 px-3 flex items-center'>Know more <BsArrowRight className='text-xl text-white'/></button>
             </Link>
-          </div>
           </div>
           
         </div>

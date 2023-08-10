@@ -28,7 +28,9 @@ const goToNext = () => {
   return (
     <div>
       <div className="w-full md:h-[400px] h-[300px] group">
+        <div className="w-full md:h-[400px] h-[300px]">
         <div style={{ backgroundImage: `url(${images[currentIndigo]})` }} className="w-full h-full rounded-2xl duration-500"></div>
+        </div>
         <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[50%] left-5 text-2xl rounded-full p-2 bg-black/25 text-white cursor-pointer">
           <BsArrowLeftShort onClick={goToPrevious} size={20} />
         </div>
@@ -42,7 +44,7 @@ const goToNext = () => {
         </div>
       </div>
       <div className="grid px-10 md:px-3 md:grid-cols-2 grid-cols-1 gap-6 mt-10 ">
-        <div className="w-[300px] h-[350px] md:h-[500px] md:w-[450px] ">
+        <div className="w-[300px] h-[350px] md:h-[500px] md:w-[490px] ">
           <img src={logo} alt="" className='w-full h-full' />
         </div>
         <div className="px-3 text-gray-600">
@@ -79,8 +81,8 @@ const goToNext = () => {
                 <span className='text-gray-500'>Top Companies</span>
               </div>
             </div>
-            <div className="mt-5">
-              <button className='py-2 px-3 shadow flex items-center gap-4 bg-red-600'>Know more<BsArrowRight className='text-xl text-white'/></button>
+            <div className="mt-5 mb-5">
+              <Link to='/' className='py-2 px-3 shadow flex items-center gap-4 bg-red-600'>Home <BsArrowRight className='text-xl text-white'/></Link>
             </div>
         </div>
       </div>
