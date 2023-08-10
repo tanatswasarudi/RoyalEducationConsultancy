@@ -8,6 +8,7 @@ import img4 from '../Assets/student4.jpg';
 import img5 from '../Assets/student5.jpg';
 import img6 from '../Assets/student6.jpg';
 import logo from '../Assets/Logo.jpg'
+import {Link} from 'react-router-dom'
 
 const About = () => {
   const images = [img1, img2, img3, img4, img5, img6];
