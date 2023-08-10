@@ -41,7 +41,7 @@ const Courses = () => {
           <li className='mt-3 flex items-center gap-2'><GoDotFill/>Take English exams with our assistance in order to get Visa</li>
         </ul>
         <p className='md:mt-10 mt-5 text-blue-950 text-lg font-semibold'>ADMISSIONS TO AFRICA</p>
-          <ul className='px-4 mt-5'>
+          <ul className='px-4 mt-5 mb-5'>
           <li className='mt-3 flex items-center gap-2'><GoDotFill/>University of Cape-Town</li>
           <li className='mt-3 flex items-center gap-2'><GoDotFill/>Country: South-Africa(AFRICA)</li>
           <li className='mt-3 flex items-center gap-2'><GoDotFill/>FEES: 700-1500USD per year</li>
@@ -56,8 +56,8 @@ const Courses = () => {
       <div className="">
         <div className="">  
         <iframe 
-         width="400" 
-         height="300" 
+         width="500" 
+         height="400" 
          src="https://www.youtube.com/embed/p6m8eoJFaeI" 
           frameborder="0" 
          allowfullscreen
@@ -65,9 +65,9 @@ const Courses = () => {
          </iframe></div>
        <div className="mt-8">
        <iframe 
-         width="400" 
-         height="300" 
-         src="https://www.youtube.com/watch?v=W3b9_zMEulA" 
+         width="500" 
+         height="400" 
+         src="https://www.youtube.com/embed?v=W3b9_zMEulA" 
           frameborder="0" 
          allowfullscreen
          >

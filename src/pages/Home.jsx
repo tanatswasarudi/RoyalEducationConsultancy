@@ -82,9 +82,9 @@ const Home = () => {
         <div className="">
         <div className=""> 
         <iframe 
-            width="400" 
-            height="300" 
-            src="https://www.youtube.com/watch?v=54wZjgTBfP4" 
+            width="500" 
+            height="400" 
+            src="https://www.youtube.com/embed?v=54wZjgTBfP4" 
             frameborder="0" 
             allowfullscreen
             >
@@ -92,30 +92,51 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="md:mt-14 mt-8 px-3 md:px-10">
-        <span className='mx-auto'><h1 className='text-2xl text-blue-950 font-semibold'>STUDENT'S SERVICES</h1></span>
-        <div className="px-2 mt-6 grid md:grid-cols-2 grid-cols-1 gap-2 overflow-scroll scrollbar-none">
-          
-          <div className="shadow rounded w-[400px] h-[300px] flex flex-col items-center bg-slate-100">
-          <span className='gap-3 mx-auto text-lg font-semibold mb-6 mt-2 justify-center flex items-center'><HiAcademicCap className='text-blue-500'/> Study Visa</span>
-          <p className='px-2 text-gray-500 font-serif'>We help our students get their Visas, prepare for IELTs as well as making CVs and we also provide flight booking service</p>
-          </div>
-          
-          <div className="shadow rounded w-[400px] h-[300px] flex flex-col items-center bg-slate-100">
-          <span className=' gap-3 mx-auto text-lg font-semibold mb-6 mt-2 justify-center flex items-center'><HiAcademicCap className='text-blue-500'/> Internships</span>
-          <p className='px-2 text-gray-500 font-serif'>We make sure that our students get enrolled at institutions that are connected with the Top recruiters to help them with industrial exposure</p>
-          
-          </div>
-          
-          <div className="shadow rounded w-[400px] h-[300px] flex flex-col items-center bg-slate-100">  
-            <span className=' gap-3 mx-auto text-lg font-semibold mb-6 mt-2 justify-center flex items-center'><HiAcademicCap className='text-blue-500'/> Scholarships</span>
-           <p className='px-2 text-gray-500 font-serif'>We help our students avail the highest possible scholarship they can get to fund their higher studies as well as accommodation</p>
-          </div>
-          
-        </div>
+      <div className="mt-10 justify-center"><span>OUR CAMPUSES</span></div>
+      <div className="mt-3 grid grid-cols-1 md:grid-cols-3">
+              <div className=""> <iframe 
+    width="400" 
+    height="300" 
+    src="https://www.youtube.com/embed/8x1wEg9tPWQ" 
+    frameborder="0" 
+    allowfullscreen
+  ></iframe></div>
+              <div className=""> <iframe 
+    width="400" 
+    height="300" 
+    src="https://www.youtube.com/embed/ftB0BsRM2y8" 
+    frameborder="0" 
+    allowfullscreen
+  ></iframe></div>
+              <div className=""> <iframe 
+    width="400" 
+    height="300" 
+    src="https://www.youtube.com/embed/0ehNHUD4TU0" 
+    frameborder="0" 
+    allowfullscreen
+  ></iframe></div>
+      </div>
+
+      <div className="mt-10 justify-center"><span>OUR GALLERY</span></div>
+      <div className="mt-3 grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className=""> <iframe 
+    width="400" 
+    height="300" 
+    src="https://www.youtube.com/embed/1mhbMTfEQ94" 
+    frameborder="0" 
+    allowfullscreen
+  ></iframe></div>
+              <div className=""> <iframe 
+    width="400" 
+    height="300" 
+    src="https://www.youtube.com/embed/JDkAeiXWI4c" 
+    frameborder="0" 
+    allowfullscreen
+  ></iframe></div>
       </div>
     </div>
   )
 }
 
 export default Home;
+ 
