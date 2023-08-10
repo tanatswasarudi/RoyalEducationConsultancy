@@ -75,7 +75,7 @@ const Register = () => {
       <div className="w-full md:h-[400px] h-[300px]  ">
         <img src={Study} alt="" className='w-full h-full'/>
       </div>
-        <div className="mt-10 shadow mx-auto rounded-full max-w-2xl">
+          <form className="mt-10 shadow mx-auto rounded-full max-w-2xl" onSubmit={handleSubmit}>
           <div className="w-20 h-20 mx-auto"><img src={user} alt="" className='w-full h-full rounded-full' /></div>
           <div className="grid md:grid-cols-2 grid-cols-1 gap-6">
             <span className='flex flex-col items-center'>
@@ -90,7 +90,7 @@ const Register = () => {
               <label htmlFor='email' className='font-sans'>Email</label>
               <div className="w-full py-2 px-3 border border-blue-700 rounded-full flex items-center">
                 <MdEmail className='text-xl'/>
-              <input type='email' name='name' className='w-full outline-none' onChange={handleOnChange} value={data.email}/>
+              <input type='email' name='email' className='w-full outline-none' onChange={handleOnChange} value={data.email}/>
               </div>
 
             </span>
@@ -119,7 +119,7 @@ const Register = () => {
             </span>
 
           </div>
-          <div className="grid md:grid-cols-2 grid-cols-1 gap-6 mt-6">
+          <div className="grid md:grid-cols-2 grid-cols-1 gap-6 mt-6 mb-4">
             <span>
               <select className='py-2 px-3 border border-blue-700 rounded-full w-full' onChange={handleOnChange}value={data.degree}>
           <option value={"other"}>Select Degree</option>
@@ -146,7 +146,8 @@ const Register = () => {
               </select>
             </span>
           </div>
-          <span className='mt-6'>
+         <div className='mt-4'>
+         <span >
             <select className='py-2 px-3 border border-blue-700 rounded-full w-full' onChange={handleOnChange}value={data.altcourse}>
           <option value={"other"}>Alternative Course</option>
           <option value={"Arts & Commerce"}>Arts & Commerce</option>
@@ -165,6 +166,9 @@ const Register = () => {
           <option value={"Science"}>Science</option>
               </select>
             </span>
+         </div>
+         
+            
             <div className="grid md:grid-cols-3 grid-cols-1 gap-6 mt-6">
               <span className='flex flex-col items-center'>
                 <label htmlFor='nationality' className='font-sans'>Nationality</label>
@@ -204,10 +208,11 @@ const Register = () => {
               {showPassword ? <BiShowAlt /> : <BiHide />}
             </span>
           </div>
-
           <button className='primary'>Login</button>
         <p className='mt-4 px-2'>Already Have an Account ? <Link to='/login' className='text-blue-500'>Login</Link> </p>
-        </div>
+          </form>
+         
+       
     </div>
   )
 }

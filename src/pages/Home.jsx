@@ -7,6 +7,10 @@ import imgg3 from '../Assets/europe3.jpg';
 import imgg4 from '../Assets/scholar.jpg';
 import imgg5 from '../Assets/scholarships.png';
 import imgg6 from '../Assets/scholarships2.png';
+import first from '../Assets/registration.png';
+import second from '../Assets/scholar2.jpg';
+import third from '../Assets/reg.jpg';
+import {HiAcademicCap} from 'react-icons/hi'
 
 const Home = () => {
   const slides = [imgg1, imgg2, imgg3, imgg4, imgg5, imgg6];
@@ -27,8 +31,8 @@ const Home = () => {
 
   return (
     <div className="">
-      <div className="md:max-w-[1400px] max-w-[450px] md:h-[780px] h-[300px] w-full m-auto relative group">
-        <div style={{ backgroundImage: `url(${slides[currentIndex]})` }} className=" w-full h-full rounded-2xl duration-500"></div>
+      <div className=" w-full md:h-[400px] h-[300px] m-auto group">
+        <img src={ `url(${slides[currentIndex]})` } alt="" className=" w-full h-full rounded-2xl duration-500"/>
         <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[50%] left-5 text-2xl rounded-full p-2 bg-black/25 text-white cursor-pointer">
           <BsArrowLeftShort onClick={prevSlide} size={30} />
         </div>
@@ -41,13 +45,11 @@ const Home = () => {
           ))}
         </div>
       </div>
-      <div className="mt-10 grid md:grid-cols-2 grid-cols-1 gap-6">
+      <div className="mt-10 px-3 md:px-10 grid md:grid-cols-2 grid-cols-1 gap-6 mb-4">
         <div className="">
-          <p className='text-blue-950 font-serif'>WHY CHOOSE US</p>
-          <p className='mt-6'>Royal Education Consultancy doesn't just specialize on scholarships to India, we are linked with a large number of universities in Europe in countries like Canada, Poland, Italy and Germany etc. We also provide support at every stage of the process, from accepting enrolment to the hassle-free arrival of students. </p>
-          <p>We are also linked with other countries such as Ghana, South Africa, Indonesia, Thailand and China.This is to ensure that our students get the best education at a lower cost as well as the ability to choose their dream destination</p>
-          <p>After our students have arrived at their destinations, we also provide them with accomodation free of charge for the first month to allow them to settle</p>
-            <p>Our Services also include:</p>
+          <p className='text-blue-950 font-serif text-2xl'>WHY CHOOSE US</p>
+          <p className='mt-6 text-gray-500 font-semibold'>Royal Education Consultancy doesn't just specialize on scholarships to India, we are linked with a large number of universities in Europe in countries like Canada, Poland, Italy and Germany etc. We also provide support at every stage of the process, from accepting enrolment to the hassle-free arrival of students. </p>
+            <p className='mt-4 text-lg text-blue-950 font-serif'>Our Services also include:</p>
             <div className='grid grid-cols-2 gap-3'>
             <span className='flex flex-col items-center'>
             <span className='flex items-center font-semibold'><RxDotFilled className='text-red-500'/>Top Universities</span>
@@ -73,11 +75,46 @@ const Home = () => {
                 <span className='text-gray-500'>Companies</span>
               </div>
             </div>
-            <div className="mt-5">
+            <Link to='/About' className="mt-5">
               <button className='py-2 px-3 shadow flex items-center bg-red-600'>Know more <BsArrowRight className='text-xl text-white'/></button>
-            </div>
+            </Link>
         </div>
         <div className="">
+        <div className=""><embed type="video/webm" src=" https://www.youtube.com/watch?v=54wZjgTBfP4" width="400" height="300"></embed></div>
+        </div>
+      </div>
+      <div className="mt-10 px-3 md:px-10">
+        <span className='mx-auto'><h1 className='text-2xl text-blue-950 font-semibold'>STUDENT'S SERVICES</h1></span>
+        <div className="px-2 mt-5 grid md:grid-cols-2 grid-cols-1 gap-6 overflow-scroll scrollbar-none">
+          <div className="shadow rounded max-w-md py-4">
+          <div style={{ backgroundImage: `url(${first})` }} className="w-full h-full" >
+          <span className=' gap-3 mx-auto text-lg font-semibold mb-6'><HiAcademicCap className='text-blue-500'/> Study Visa</span>
+          <p>We help our students get their Visas, prepare for IELTs as well as making CVs and we also provide flight booking service</p>
+          <Link to='/About' className="mt-5">
+              <button className='py-2 px-3 flex items-center'>Know more <BsArrowRight className='text-xl text-white'/></button>
+            </Link>
+          </div>
+          </div>
+          
+          <div className="shadow rounded max-w-md py-4 overflow-hidden">
+          <div style={{ backgroundImage: `url(${second})` }} className="w-full h-full flex flex-col items-center">
+          <span className=' gap-3 mx-auto text-lg font-semibold mb-6'><HiAcademicCap className='text-blue-500'/> Internships</span>
+          <p>We make sure that our students get enrolled at institutions that are connected with the Top recruiters to help them with industrial exposure</p>
+          <Link to='/Scholarships' className="mt-5">
+              <button className='py-2 px-3 flex items-center'>Know more <BsArrowRight className='text-xl text-white'/></button>
+            </Link>
+          </div>
+          </div>
+          
+          <div className="shadow rounded max-w-md py-4">
+          <div style={{ backgroundImage: `url(${third})` }} className="w-full h-full flex flex-col items-center">
+            <span className=' gap-3 mx-auto text-lg font-semibold mb-6'><HiAcademicCap className='text-blue-500'/> Scholarships</span>
+           <p>We help our students avail the highest possible scholarship they can get to fund their higher studies as well as accommodation</p>
+           <Link to='/Scholarships' className="mt-5">
+              <button className='py-2 px-3 flex items-center'>Know more <BsArrowRight className='text-xl text-white'/></button>
+            </Link>
+          </div>
+          </div>
           
         </div>
       </div>
