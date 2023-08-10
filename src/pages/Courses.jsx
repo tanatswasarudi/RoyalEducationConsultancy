@@ -53,7 +53,7 @@ const Courses = () => {
         
         </ul>
       </div>
-      <div className="">
+      <div className="md:mt-10 mt-5">
         <div className="">  
         <iframe 
         width="md:800 300"
@@ -67,7 +67,7 @@ const Courses = () => {
        <iframe 
          width="md:800 300"
          height="md:700 260"
-         src="https://www.youtube.com/embed?W3b9_zMEulA" 
+         src="https://www.youtube.com/embed/W3b9_zMEulA" 
           frameborder="0" 
          allowfullscreen
          >

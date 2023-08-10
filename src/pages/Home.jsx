@@ -93,7 +93,7 @@ const Home = () => {
         </div>
       </div>
       <div className="mt-10 px-3 mx-auto w-full"><span className='text-lg text-blue-950 font-serif font-semibold'>OUR CAMPUSES</span></div>
-      <div className="mt-3 px-3 grid grid-cols-1 md:grid-cols-3 gap-6 overflow-scroll scrollbar-none">
+      <div className="mt-3 mb-10 px-3 grid grid-cols-1 md:grid-cols-3 gap-6 overflow-scroll scrollbar-none">
               <div className=""> <iframe 
    width="md:650 300"
    height="md:550 260"
