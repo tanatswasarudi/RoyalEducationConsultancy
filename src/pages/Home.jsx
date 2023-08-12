@@ -111,8 +111,8 @@ const Home = () => {
             >
           </iframe>
           <div className="flex gap-4 mt-4">
-          <button className='font-bold flex items-center bg-blue-500 md:text-base font-mono text-slate-200 px-4 py-2 hover:bg-blue-700 rounded' onClick={handleCallRequest2}>CALL<span className='text-sm'>Nomagugu</span><BsFillTelephoneInboundFill/></button>
-          <button className='font-bold flex items-center  bg-blue-500 md:text-base font-mono text-slate-200 px-4 py-2 hover:bg-blue-700 rounded' onClick={handleCallRequest}>CALL <span className='text-sm'>Magrill</span><BsFillTelephoneInboundFill/></button>
+          <button className='font-bold flex items-center bg-blue-500 md:text-base font-mono text-slate-200 px-4 py-2 hover:bg-blue-700 rounded' onClick={handleCallRequest2}>CALL Nomagugu<BsFillTelephoneInboundFill/></button>
+          <button className='font-bold flex items-center  bg-blue-500 md:text-base font-mono text-slate-200 px-4 py-2 hover:bg-blue-700 rounded' onClick={handleCallRequest}>CALL Magrill<BsFillTelephoneInboundFill/></button>
           </div>
 
           </div>
@@ -124,7 +124,7 @@ const Home = () => {
           <button onClick={prevProduct} className='bg-slate-300 hover:bg-slate-400 text-lg p-1'><GrPrevious/></button>
           <button onClick={nextProduct} className='bg-slate-300 hover:bg-slate-400 text-lg p-1'><GrNext/></button>
         </div>
-      <div className="mt-3 mb-10 flex items-center gap-2 overflow-scroll scrollbar-nonescroll-smooth transition-all" ref={slideProductRef}>
+      <div className="mt-3 mb-10 flex items-center gap-2 overflow-scroll scrollbar-none scroll-smooth transition-all" ref={slideProductRef}>
               <div className=""> <iframe 
               className='md:w-[500px] md:h-[400px] w-[300px] h-[260px]'
     src="https://www.youtube.com/embed/8x1wEg9tPWQ" 
