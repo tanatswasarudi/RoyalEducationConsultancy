@@ -40,34 +40,40 @@ const Register = () => {
               
               const { name, email,phone,guardian,Gnumber, password, course,degree,altcourse ,agent, nationality,stream} = data;
               
-              if (name && email && phone && guardian && Gnumber && password  && course && degree && altcourse && agent && nationality && stream) {
-                try {
-                  const response = await fetch(`${process.env.REACT_APP_SERVER_DORMIN}/register`,{
-                    method: 'POST',
-                    headers: {
-                      'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(data),
-                  });
-            
-                  const responseData = await response.json();
-                  if (response.ok) {
-                    toast.success(responseData.message);
-                    navigate('/login');
-                  } else {
-                    alert("Registration was not successful please try again")
-                    toast.error(responseData.message);
-                    
-                  }
-                } catch (error) {
-                  console.error(error);
-                  toast.error('Internal server error');
-                }
-              } else {
-                toast.error('Enter missing fields');
-                alert('Enter missing fields');
+              if ( phone && email && name && guardian && Gnumber && password&& course && degree && altcourse && agent && nationality && stream ) {
+                const fetchDta = await fetch(`${process.env.REACT_APP_SERVER_DORMIN}/register`,{
+                  method : "POST",
+                  headers :{
+                    "content-type" : "application/json"
+                  },
+                  body : JSON.stringify(data)
+                })
+            const fetchRes = await fetchDta.json()
+            console.log(fetchRes)
+            toast(fetchRes.message)
+            navigate('/login');
+            setData (()=>{
+              return{
+                name: "",
+                email: "",
+                phone: "",
+                Gnumber: "",
+                guardian: "",
+                password: "",
+                degree: "",
+                course: "",
+                altcourse: "",
+                agent: "",
+                nationality: "",
+                stream: "",
               }
-            };
+            })
+          }
+          else{
+            toast("Application was not succesful")
+          }
+        }
+              
             
 
   return (
