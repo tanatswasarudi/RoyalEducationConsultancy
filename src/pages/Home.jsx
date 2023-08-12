@@ -76,41 +76,43 @@ const Home = () => {
               </div>
             </div>
             <Link to='/About' className="mt-5">
-              <button className='py-2 px-3 shadow flex items-center bg-red-600'>Know more <BsArrowRight className='text-xl text-white'/></button>
+              <button className='py-2 px-3 shadow flex items-center gap-2 bg-red-600'>Know more <BsArrowRight className='text-xl text-white'/></button>
             </Link>
         </div>
         <div className="">
-        <div className=""> 
+        <div className="flex flex-col items-center"> 
         <iframe 
-            width="md:800 300"
-            height="md:700 260"
-            src="https://www.youtube.com/embed?v=54wZjgTBfP4" 
+            className='md:w-[500px] md:h-[400px] w-[300px] h-[260px]'
+            src="https://www.youtube.com/embed?54wZjgTBfP4" 
             frameborder="0" 
             allowfullscreen
             >
           </iframe>
+          <span><button
+      className="cursor-pointer py-2 px-3 bg-primary hover:bg-red-600 text-white rounded-full shadow-lg"
+    >
+    <Link to='register'>Apply Now</Link>
+    </button></span>
           </div>
+        
         </div>
       </div>
       <div className="mt-10 px-3 mx-auto w-full"><span className='text-lg text-blue-950 font-serif font-semibold'>OUR CAMPUSES</span></div>
-      <div className="mt-3 mb-10 px-3 grid grid-cols-1 md:grid-cols-3 gap-6 overflow-scroll scrollbar-none">
+      <div className="mt-3 mb-10 px-3 grid grid-cols-1 md:grid-cols-3 gap-6 overflow-h">
               <div className=""> <iframe 
-   width="md:650 300"
-   height="md:550 260"
+              className='md:w-[500px] md:h-[400px] w-[300px] h-[260px]'
     src="https://www.youtube.com/embed/8x1wEg9tPWQ" 
     frameborder="0" 
     allowfullscreen
   ></iframe></div>
               <div className=""> <iframe 
-    width="md:650 300"
-    height="md:550 260"
+     className='md:w-[500px] md:h-[400px] w-[300px] h-[260px]'
     src="https://www.youtube.com/embed/ftB0BsRM2y8" 
     frameborder="0" 
     allowfullscreen
   ></iframe></div>
               <div className=""> <iframe 
-  width="md:650 300"
-  height="md:550 260"
+   className='md:w-[500px] md:h-[400px] w-[300px] h-[260px]'
     src="https://www.youtube.com/embed/0ehNHUD4TU0" 
     frameborder="0" 
     allowfullscreen

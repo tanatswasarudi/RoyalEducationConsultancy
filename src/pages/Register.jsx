@@ -82,7 +82,7 @@ const Register = () => {
               <label htmlFor='name' className='font-sans'>Full Name</label>
               <div className="w-full py-2 px-3 border border-blue-700 rounded-full flex items-center">
               <BiSolidUserPin className='text-xl'/>
-              <input type='text' name='name' className='w-full outline-none' onChange={handleOnChange} value={data.name}/>
+              <input type='text' name='name' id='name' className='w-full outline-none' onChange={handleOnChange} value={data.name}/>
               </div>
               
             </span>
@@ -90,14 +90,14 @@ const Register = () => {
               <label htmlFor='email' className='font-sans'>Email</label>
               <div className="w-full py-2 px-3 border border-blue-700 rounded-full flex items-center">
                 <MdEmail className='text-xl'/>
-              <input type='email' name='email' className='w-full outline-none' onChange={handleOnChange} value={data.email}/>
+              <input type='email' name='email' id='email' className='w-full outline-none' onChange={handleOnChange} value={data.email}/>
               </div>
 
             </span>
             <span className='flex flex-col items-center'>
               <label htmlFor='phone' className='font-sans'>Phone Number</label>
               <div className="py-2 px-3 border border-blue-700 rounded-full flex items-center w-full">
-              <input type='number' name='phone' className='w-full outline-none' onChange={handleOnChange} value={data.phone}/>
+              <input type='number' name='phone' id='phone' className='w-full outline-none' onChange={handleOnChange} value={data.phone}/>
               </div>
               
             </span>
@@ -107,21 +107,21 @@ const Register = () => {
               <label htmlFor='guardian' className='font-sans px-3'>Name of Guardian</label>
               <div className="py-2 px-3 border border-blue-700 rounded-full flex items-center w-full">
                 <FaUserTie className='text-xl'/>
-              <input type='text' name='guardian' className='outline-none w-full' onChange={handleOnChange} value={data.guardian}/>
+              <input type='text' name='guardian' id='guardian' className='outline-none w-full' onChange={handleOnChange} value={data.guardian}/>
               </div>
             </span>
             <span className='flex flex-col items-center'>
               <label htmlFor='Gnumber' className='font-sans px-3'>Guardian's Number</label>
               <div className="flex items-center py-2 px-3 border border-blue-700 rounded-full w-full">
                 <AiFillPhone className='text-xl' />
-              <input type='number' name='Gnumber' className='w-full outline-none' onChange={handleOnChange} value={data.Gnumber}/>
+              <input type='number' name='Gnumber' id='Gnumber' className='w-full outline-none' onChange={handleOnChange} value={data.Gnumber}/>
               </div>
             </span>
 
           </div>
           <div className="grid md:grid-cols-2 grid-cols-1 gap-6 mt-6 mb-4">
             <span>
-              <select className='py-2 px-3 border border-blue-700 rounded-full w-full' onChange={handleOnChange}value={data.degree}>
+              <select className='py-2 px-3 border border-blue-700 rounded-full w-full' id='degree' name='degree' onChange={handleOnChange}value={data.degree}>
           <option value={"other"}>Select Degree</option>
           <option value={"Diploma"}>Diploma</option>
           <option value={"Bachelors"}>Bachelors</option>
@@ -132,7 +132,7 @@ const Register = () => {
             
             </span>
             <span>
-            <select className='py-2 px-3 border border-blue-700 rounded-full w-full' onChange={handleOnChange}value={data.course}>
+            <select className='py-2 px-3 border border-blue-700 rounded-full w-full' id='course' name='course' onChange={handleOnChange} value={data.course}>
           <option value={"other"}>Select Course</option>
           <option value={"Arts & Commerce"}>Arts & Commerce</option>
           <option value={"Computer"}>Computer</option>
@@ -148,7 +148,7 @@ const Register = () => {
           </div>
          <div className='mt-4'>
          <span >
-            <select className='py-2 px-3 border border-blue-700 rounded-full w-full' onChange={handleOnChange}value={data.altcourse}>
+            <select className='py-2 px-3 border border-blue-700 rounded-full w-full' id='altcourse' name='altcourse' onChange={handleOnChange}value={data.altcourse}>
           <option value={"other"}>Alternative Course</option>
           <option value={"Arts & Commerce"}>Arts & Commerce</option>
           <option value={"Accounting"}>Accounting</option>
@@ -173,20 +173,20 @@ const Register = () => {
               <span className='flex flex-col items-center'>
                 <label htmlFor='nationality' className='font-sans'>Nationality</label>
                 <div className="py-2 px-3 border border-blue-700 rounded-full w-full flex items-center">
-                <input type='text' name='nationaltiy' className='outline-none w-full' value={data.nationality} onChange={handleOnChange}/>
+                <input type='text' name='nationaltiy' id='nationality' className='outline-none w-full' value={data.nationality} onChange={handleOnChange}/>
                 </div>
               </span>
               <span className='flex flex-col items-center'>
                 <label htmlFor='agent' className='font-sans'>Agent Name</label>
                 <div className="py-2 px-3 border border-blue-700 rounded-full flex items-center w-full">
                   <MdSupportAgent className="text-xl"/>
-                <input type='text' name='agent' className='outline-none w-full' value={data.agent} onChange={handleOnChange}/>
+                <input type='text' name='agent' id='agent' className='outline-none w-full' value={data.agent} onChange={handleOnChange}/>
                 </div>
               </span>
               <span className='flex flex-col items-center'>
                <label htmlFor='stream' className='font-sans'>Which Stream Are You in?</label>
                <div className="py-2 px-3 border border-blue-700 rounded-full  flex items-center w-full">
-               <input type='text' name='stream' className='outline-none w-full' value={data.stream} onChange={handleOnChange}/>
+               <input type='text' name='stream' id='stream' className='outline-none w-full' value={data.stream} onChange={handleOnChange}/>
                </div>
               </span>
             </div>
