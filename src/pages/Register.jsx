@@ -53,10 +53,7 @@ const Register = () => {
                   const responseData = await response.json();
                   if (response.ok) {
                     toast.success(responseData.message);
-                    dispatch(loginRedux(responseData ))
                     navigate('/login');
-                    console.log(userData)
-
                   } else {
                     alert("Registration was not successful please try again")
                     toast.error(responseData.message);

@@ -77,7 +77,7 @@ const AgentRegistration = () => {
               <input type='email' name='email' id='email' placeholder='johndoe@gmail.com' className=' w-full outline-none'value={data.email} onChange={handleOnChange}/>  
          </div>
               
-              <button className='px-4 py-2 bg-green-500 hover:bg-green-800 rounded-2xl' >Apply Now</button>
+              <button type='submit' className='px-4 py-2 bg-green-500 hover:bg-green-800 rounded-2xl' >Apply Now</button>
               </form>
       </div>
     </div>
