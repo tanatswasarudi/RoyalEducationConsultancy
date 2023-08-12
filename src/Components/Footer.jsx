@@ -34,7 +34,7 @@ const Footer = () => {
               <p className="text-gray-500">
               <span className="flex flex-row items-center cursor-pointer font-serif hover:text-yellow-500"><MdEmail/><strong>Email:</strong> <span className="text-sm md:text-base">RoyalEducation@gmail.com</span></span><br/>
               <span className="flex flex-row items-center cursor-pointer font-serif hover:text-blue-500"><BsFacebook className="text-blue-500" /><strong>Facebook: </strong> <span className="text-sm md:text-base">RoyalEducation</span></span><br/>
-              <span className="flex flex-row items-center cursor-pointer font-serif hover:text-green-500" onClick={connectWithWhatsApp}><FaWhatsappSquare className="text-2xl text-green-600"/><strong>WhatsApp:</strong> <span className="text-sm md:text-base shadow rounded p-2">Click Here</span></span><br/>
+              <span className="flex flex-row items-center cursor-pointer font-serif hover:text-green-500" onClick={connectWithWhatsApp}><FaWhatsappSquare className="text-2xl text-green-600"/><strong>WhatsApp:</strong> <span className="text-sm md:text-base shadow rounded p-2">+91-####-####-##</span></span><br/>
               </p>
               
             </div>

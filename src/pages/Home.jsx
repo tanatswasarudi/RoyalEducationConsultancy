@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { RxDotFilled } from 'react-icons/rx';
 import { BsArrowLeftShort, BsArrowRightShort, BsArrowRight } from 'react-icons/bs';
 import imgg1 from '../Assets/europe.jpg';
@@ -7,8 +7,9 @@ import imgg3 from '../Assets/europe3.jpg';
 import imgg4 from '../Assets/scholar.jpg';
 import imgg5 from '../Assets/scholarships.png';
 import imgg6 from '../Assets/scholarships2.png';
-import {HiAcademicCap} from 'react-icons/hi'
+import {GrNext,GrPrevious} from 'react-icons/gr' 
 import {Link} from 'react-router-dom'
+import {BsFillTelephoneInboundFill} from 'react-icons/bs'
 
 const Home = () => {
   const slides = [imgg1, imgg2, imgg3, imgg4, imgg5, imgg6];
@@ -26,7 +27,28 @@ const Home = () => {
   const goToSlide = (slideIndex) => {
     setCurrentIndex(slideIndex);
   };
+  const slideProductRef = useRef()
+  const nextProduct = ()=>{
+    slideProductRef.current.scrollLeft += 200 
+  }
+  const prevProduct = ()=>{
+    slideProductRef.current.scrollLeft -= 200
+  }
+  const phoneNumber = '+918264420815'; 
 
+  const handleCallRequest = () => {
+    const message = 'Please call me back Magrill!';
+    const callUrl = `tel:${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(callUrl);
+  };
+
+  const phoneNumber2 = '+918264420815'; 
+
+  const handleCallRequest2 = () => {
+    const msg = 'Please call me back Nomagugu!';
+    const call = `tel:${phoneNumber2}?text=${encodeURIComponent(msg)}`;
+    window.open(call);
+  };
   return (
     <div className="">
       <div className=" w-full md:h-[400px] h-[300px] m-auto group">
@@ -83,22 +105,26 @@ const Home = () => {
         <div className="flex flex-col items-center"> 
         <iframe 
             className='md:w-[500px] md:h-[400px] w-[300px] h-[260px]'
-            src="https://www.youtube.com/embed?54wZjgTBfP4" 
+            src="https://www.youtube.com/embed/54wZjgTBfP4" 
             frameborder="0" 
             allowfullscreen
             >
           </iframe>
-          <span><button
-      className="cursor-pointer py-2 px-3 bg-primary hover:bg-red-600 text-white rounded-full shadow-lg"
-    >
-    <Link to='register'>Apply Now</Link>
-    </button></span>
+          <div className="flex gap-4 mt-4">
+          <button className='font-bold flex items-center bg-blue-500 md:text-base font-mono text-slate-200 px-4 py-2 hover:bg-blue-700 rounded' onClick={handleCallRequest2}>CALL<span className='text-sm'>Nomagugu</span><BsFillTelephoneInboundFill/></button>
+          <button className='font-bold flex items-center  bg-blue-500 md:text-base font-mono text-slate-200 px-4 py-2 hover:bg-blue-700 rounded' onClick={handleCallRequest}>CALL <span className='text-sm'>Magrill</span><BsFillTelephoneInboundFill/></button>
+          </div>
+
           </div>
         
         </div>
       </div>
       <div className="mt-10 px-3 mx-auto w-full"><span className='text-lg text-blue-950 font-serif font-semibold'>OUR CAMPUSES</span></div>
-      <div className="mt-3 mb-10 px-3 grid grid-cols-1 md:grid-cols-3 gap-6 overflow-h">
+      <div className='ml-auto flex gap-4'>
+          <button onClick={prevProduct} className='bg-slate-300 hover:bg-slate-400 text-lg p-1'><GrPrevious/></button>
+          <button onClick={nextProduct} className='bg-slate-300 hover:bg-slate-400 text-lg p-1'><GrNext/></button>
+        </div>
+      <div className="mt-3 mb-10 flex items-center gap-2 overflow-scroll scrollbar-nonescroll-smooth transition-all" ref={slideProductRef}>
               <div className=""> <iframe 
               className='md:w-[500px] md:h-[400px] w-[300px] h-[260px]'
     src="https://www.youtube.com/embed/8x1wEg9tPWQ" 

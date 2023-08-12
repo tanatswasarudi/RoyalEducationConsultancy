@@ -60,21 +60,21 @@ const AgentRegistration = () => {
               <span>
               <FaUserTie className="text-md " />
               </span>
-              <input type='text' name='name' placeholder='John Smith' className=' w-full outline-none'value={data.name} onChange={handleOnChange}/>  
+              <input type='text' name='name' id='name' placeholder='John Smith' className=' w-full outline-none'value={data.name} onChange={handleOnChange}/>  
          </div>
          <label htmlFor='phone' className='px-3 font-serif'>Phone Number</label>
         <div className='flex items-center w-full border my-1 py-2 px-3 rounded-full'>
               <span>
               <AiFillPhone className="text-md " />
               </span>
-              <input type='text' name='name' placeholder='+91 9876987655' className=' w-full outline-none'value={data.phone} onChange={handleOnChange}/>  
+              <input type='text' name='phone' id='phone' placeholder='+91 9876987655' className=' w-full outline-none'value={data.phone} onChange={handleOnChange}/>  
          </div>
       <label htmlFor='email' className='px-3 font-serif'>Email</label>
         <div className='flex items-center w-full border my-1 py-2 px-3 rounded-full'>
               <span>
               <MdEmail className="text-md " />
               </span>
-              <input type='email' name='email' placeholder='johndoe@gmail.com' className=' w-full outline-none'value={data.email} onChange={handleOnChange}/>  
+              <input type='email' name='email' id='email' placeholder='johndoe@gmail.com' className=' w-full outline-none'value={data.email} onChange={handleOnChange}/>  
          </div>
               
               <button className='px-4 py-2 bg-green-500 hover:bg-green-800 rounded-2xl' >Apply Now</button>
