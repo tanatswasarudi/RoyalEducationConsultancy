@@ -53,7 +53,7 @@ const Courses = () => {
         
         </ul>
       </div>
-      <div className="px-10 md:mt-10 mt-5">
+      <div className="md:px-10 px-3 md:mt-10 mt-5">
         <div className="">  
         <iframe 
         className='md:w-[600px] md:h-[500px] w-[300px] h-[260px]'

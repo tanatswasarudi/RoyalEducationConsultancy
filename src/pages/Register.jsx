@@ -40,32 +40,35 @@ const Register = () => {
               
               const { name, email,phone,guardian,Gnumber, password, course,degree,altcourse ,agent, nationality,stream} = data;
               
-              if (name && email && password && phone && Gnumber && guardian && course && altcourse && degree && agent && nationality && stream) {
+              if (name && email && phone && guardian && Gnumber && password  && course && degree && altcourse && agent && nationality && stream) {
                 try {
-                  const response = await fetch(`${process.env.REACT_APP_SERVER_DORMIN}/register`, {
+                  const response = await fetch(`${process.env.REACT_APP_SERVER_DORMIN}/register`,{
                     method: 'POST',
                     headers: {
                       'Content-Type': 'application/json',
                     },
                     body: JSON.stringify(data),
                   });
+            
                   const responseData = await response.json();
                   if (response.ok) {
-                    // If the response was successful (status code 200), show success message
                     toast.success(responseData.message);
-                    // Navigate to the login page
+                    dispatch(loginRedux(responseData ))
                     navigate('/login');
+                    console.log(userData)
+
                   } else {
-                    // If the response was not successful, show error message
+                    alert("Registration was not successful please try again")
                     toast.error(responseData.message);
+                    
                   }
                 } catch (error) {
                   console.error(error);
-                  // Show error message for internal server error
                   toast.error('Internal server error');
                 }
               } else {
                 toast.error('Enter missing fields');
+                alert('Enter missing fields');
               }
             };
             

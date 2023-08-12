@@ -32,7 +32,6 @@ const Login = () => {
               e.preventDefault();
             
               const { email, password } = data;
-            
               if (email && password) {
                 try {
                   const response = await fetch(`${process.env.REACT_APP_SERVER_DORMIN}/login`, {
@@ -76,7 +75,7 @@ const Login = () => {
           <img src={login} alt="" className='rounded-full w-full h-full' />
         </div>
       <form className='max-w-md mx-auto' onSubmit={handleSubmit}>
-      <label htmlFor='password' className='px-3 font-serif'>Email</label>
+      <label htmlFor='email' className='px-3 font-serif'>Email</label>
         <div className='flex items-center w-full border my-1 py-2 px-3 rounded-full'>
               <span>
               <MdEmail className="text-md " />
