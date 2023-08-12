@@ -53,10 +53,10 @@ const Courses = () => {
         
         </ul>
       </div>
-      <div className="md:mt-10 mt-5">
+      <div className="md:px-6 md:mt-10 mt-5">
         <div className="">  
         <iframe 
-        className='md:w-[500px] md:h-[400px] w-[300px] h-[260px]'
+        className='md:w-[600px] md:h-[500px] w-[300px] h-[260px]'
          src="https://www.youtube.com/embed/p6m8eoJFaeI" 
           frameborder="0" 
          allowfullscreen
@@ -64,7 +64,7 @@ const Courses = () => {
          </iframe></div>
        <div className="mt-8">
        <iframe 
-         className='md:w-[500px] md:h-[400px] w-[300px] h-[260px]'
+         className='md:w-[600px] md:h-[500px] w-[300px] h-[260px]'
          src="https://www.youtube.com/embed/W3b9_zMEulA" 
           frameborder="0" 
          allowfullscreen

@@ -28,22 +28,30 @@ const goToNext = () => {
 }
   return (
     <div>
-      <div className="w-full md:h-[400px] h-[300px] group">
-        <div className="w-full md:h-[400px] h-[300px]">
-        <div style={{ backgroundImage: `url(${images[currentIndigo]})` }} className="w-full h-full rounded-2xl duration-500"></div>
-        </div>
-        <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[50%] left-5 text-2xl rounded-full p-2 bg-black/25 text-white cursor-pointer">
-          <BsArrowLeftShort onClick={goToPrevious} size={20} />
-        </div>
-        <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[50%] right-5 text-2xl rounded-full p-2 bg-black/25 text-white cursor-pointer">
-          <BsArrowRightShort onClick={goToNext} size={20} />
-        </div>
-        <div className="flex top-3 justify-center">
-          {images.map((image, imageIndex) => (
-            <div key={imageIndex} onClick={() => goToImage(imageIndex)} className=""><RxDotFilled className='text-2xl' /></div>
-          ))}
-        </div>
+     <div className="w-full relative group">
+  <div
+    style={{ backgroundImage: `url(${images[currentIndigo]})` }}
+    className="w-full h-[300px] md:h-[400px] bg-cover bg-center rounded-2xl duration-500"
+  ></div>
+  <div className="hidden group-hover:block absolute top-1/2 transform -translate-y-1/2 left-5 text-2xl rounded-full p-2 bg-black/25 text-white cursor-pointer">
+    <BsArrowLeftShort onClick={goToPrevious} size={20} />
+  </div>
+  <div className="hidden group-hover:block absolute top-1/2 transform -translate-y-1/2 right-5 text-2xl rounded-full p-2 bg-black/25 text-white cursor-pointer">
+    <BsArrowRightShort onClick={goToNext} size={20} />
+  </div>
+  <div className="flex top-3 justify-center">
+    {images.map((image, imageIndex) => (
+      <div
+        key={imageIndex}
+        onClick={() => goToImage(imageIndex)}
+        className="cursor-pointer"
+      >
+        <RxDotFilled className="text-2xl" />
       </div>
+    ))}
+  </div>
+</div>
+
       <div className="grid px-10 md:px-3 md:grid-cols-2 grid-cols-1 gap-6 mt-10 ">
         <div className="w-[300px] h-[350px] md:h-[500px] md:w-[490px] ">
           <img src={logo} alt="" className='w-full h-full' />

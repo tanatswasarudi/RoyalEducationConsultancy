@@ -52,9 +52,8 @@ const Home = () => {
   return (
     <div className="">
       <div className=" w-full md:h-[400px] h-[300px] m-auto group">
-        <div className=" w-full md:h-[400px] h-[300px]">
-             <div style={{backgroundImage:`url(${slides[currentIndex]})`} } alt="" className=" w-full h-full object-cover bg-cover bg-center rounded-2xl duration-500"></div>
-        </div>
+      <div style={{ backgroundImage: `url(${slides[currentIndex]})` }}alt="" className="w-full h-full object-contain bg-cover bg-center rounded-2xl duration-500">
+  </div>
         <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[50%] left-5 text-2xl rounded-full p-2 bg-black/25 text-white cursor-pointer">
           <BsArrowLeftShort onClick={prevSlide} size={30} />
         </div>
@@ -124,7 +123,7 @@ const Home = () => {
           <button onClick={prevProduct} className='bg-slate-300 hover:bg-slate-400 text-lg p-1'><GrPrevious/></button>
           <button onClick={nextProduct} className='bg-slate-300 hover:bg-slate-400 text-lg p-1'><GrNext/></button>
         </div>
-      <div className="mt-3 mb-10 flex items-center gap-2 overflow-scroll scrollbar-none scroll-smooth transition-all" ref={slideProductRef}>
+      <div className="mt-3 mb-10 px-3 flex items-center gap-2 overflow-scroll scrollbar-none scroll-smooth transition-all" ref={slideProductRef}>
               <div className=""> <iframe 
               className='md:w-[500px] md:h-[400px] w-[300px] h-[260px]'
     src="https://www.youtube.com/embed/8x1wEg9tPWQ" 

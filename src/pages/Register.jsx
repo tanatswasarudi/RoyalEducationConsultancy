@@ -173,7 +173,7 @@ const Register = () => {
               <span className='flex flex-col items-center'>
                 <label htmlFor='nationality' className='font-sans'>Nationality</label>
                 <div className="py-2 px-3 border border-blue-700 rounded-full w-full flex items-center">
-                <input type='text' name='nationaltiy' id='nationality' className='outline-none w-full' value={data.nationality} onChange={handleOnChange}/>
+                <input type='text' name='nationality' id='nationality' className='outline-none w-full' value={data.nationality} onChange={handleOnChange}/>
                 </div>
               </span>
               <span className='flex flex-col items-center'>
