@@ -143,8 +143,56 @@ const Home = () => {
     frameborder="0" 
     allowfullscreen
   ></iframe></div>
-      </div>
 
+         <div className=""> <iframe 
+   className='md:w-[500px] md:h-[400px] w-[300px] h-[260px]'
+    src="https://www.youtube.com/embed/ocybd-WJo7o" 
+    frameborder="0" 
+    allowfullscreen
+  ></iframe></div>
+     
+     <div className=""> <iframe 
+   className='md:w-[500px] md:h-[400px] w-[300px] h-[260px]'
+    src="https://www.youtube.com/embed/aB_6C7HK_RI" 
+    frameborder="0" 
+    allowfullscreen
+  ></iframe></div>
+
+<div className=""> <iframe 
+   className='md:w-[500px] md:h-[400px] w-[300px] h-[260px]'
+    src="https://www.youtube.com/embed/QFsyO2K7cVc" 
+    frameborder="0" 
+    allowfullscreen
+  ></iframe></div>
+
+<div className=""> <iframe 
+   className='md:w-[500px] md:h-[400px] w-[300px] h-[260px]'
+    src="https://www.youtube.com/embed/bBIGfsNtSmA" 
+    frameborder="0" 
+    allowfullscreen
+  ></iframe></div>
+
+<div className=""> <iframe 
+   className='md:w-[500px] md:h-[400px] w-[300px] h-[260px]'
+    src="https://www.youtube.com/embed/Cdjm4gT_g5I" 
+    frameborder="0" 
+    allowfullscreen
+  ></iframe></div>
+
+<div className=""> <iframe 
+   className='md:w-[500px] md:h-[400px] w-[300px] h-[260px]'
+    src="https://www.youtube.com/embed/_H4hSTQlNpQ" 
+    frameborder="0" 
+    allowfullscreen
+  ></iframe></div>
+
+<div className=""> <iframe 
+   className='md:w-[500px] md:h-[400px] w-[300px] h-[260px]'
+    src="https://www.youtube.com/embed/pEgnCkoyBPw" 
+    frameborder="0" 
+    allowfullscreen
+  ></iframe></div>
+      </div>
     </div>
   )
 }
