@@ -31,8 +31,8 @@ const Login = () => {
             const handleSubmit = async (e) => {
               e.preventDefault();
             
-              const {name,email,password} = data
-              if(name && email && password){
+              const {email,password} = data
+              if( email && password){
                 const fetchData = await fetch(`${process.env.REACT_APP_SERVER_DORMIN}/login`,{
                   method : "POST",
                   headers : {
