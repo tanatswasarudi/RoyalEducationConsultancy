@@ -208,7 +208,7 @@ const Register = () => {
               {showPassword ? <BiShowAlt /> : <BiHide />}
             </span>
           </div>
-          <button className='primary'>Login</button>
+          <button type="submit" className='primary'>Submit</button>
         <p className='mt-4 px-2'>Already Have an Account ? <Link to='/login' className='text-blue-500'>Login</Link> </p>
           </form>
          

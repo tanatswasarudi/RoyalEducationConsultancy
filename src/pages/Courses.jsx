@@ -8,7 +8,7 @@ const Courses = () => {
       <div className="w-full md:h-[400px] h-[300px]  ">
         <img src={Study} alt="" className='w-full h-full'/>
       </div>
-    <div className="mt-10 grid md:grid-cols-2 grid-cols-1 gap-6 md:px-10 px-3 overflow-scroll scrollbar-none">
+    <div className="mt-10 grid md:grid-cols-2 grid-cols-1 gap-6 px-10  overflow-scroll scrollbar-none">
       <div className="flex flex-col items-center px-3">
           <p className='md:mt-10 mt-5 text-blue-950 text-lg font-semibold'>ADMISSIONS TO INDIA</p>
           <ul className=' px-4 mt-5'>
@@ -53,7 +53,7 @@ const Courses = () => {
         
         </ul>
       </div>
-      <div className="md:px-6 md:mt-10 mt-5">
+      <div className="px-10 md:mt-10 mt-5">
         <div className="">  
         <iframe 
         className='md:w-[600px] md:h-[500px] w-[300px] h-[260px]'
