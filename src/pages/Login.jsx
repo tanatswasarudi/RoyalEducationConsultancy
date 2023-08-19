@@ -31,32 +31,43 @@ const Login = () => {
             const handleSubmit = async (e) => {
               e.preventDefault();
             
-              const {email,password} = data
-              if( email && password){
-                const fetchData = await fetch(`${process.env.REACT_APP_SERVER_DORMIN}/login`,{
-                  method : "POST",
-                  headers : {
-                      "content-type" : "application/json"
-                  },
-                  body : JSON.stringify(data)
-              })
-              
-              const Resdata = await fetchData.json()
-              console.log(Resdata)
-              toast(Resdata.message)
-              alert("Login Succesful")
-                      if(Resdata.alert){
-                        dispatch(loginRedux(Resdata))
-                        setTimeout(()=>{
-                          navigate("/account")
-                        },1000)
-                      }
-                      console.log(userData)
+              const { email, password } = data;
+            
+              if (email && password) {
+                try {
+                  const response = await fetch(`${process.env.REACT_APP_SERVER_DORMIN}/login`, {
+                    method: 'POST',
+                    headers: {
+                      'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(data),
+                  });
+            
+                  const responseData = await response.json();
+                  if (response.ok) {
+                    // If the response was successful (status code 200), show success message
+                    toast.success(responseData.message);
+                    dispatch(loginRedux(responseData ))
+                    // Navigate to the home page
+                    navigate('/account');
+                    console.log(userData)
+
+                  } else {
+                    // If the response was not successful, show error message
+                    toast.error(responseData.message);
+                    
+                  }
+                } catch (error) {
+                  console.error(error);
+                  // Show error message for internal server error
+                  toast.error('Internal server error');
+                }
+              } else {
+                // Show error message for missing fields
+                toast.error('Enter missing fields');
+                alert('Enter missing fields');
               }
-              else{
-                alert("Enter required fields")
-            }
-         }
+            };
   return (
     <div className='mt-4 grow flex items-center justify-around'>
         <div className="mb-64">
