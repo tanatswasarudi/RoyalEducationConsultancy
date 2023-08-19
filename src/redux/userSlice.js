@@ -1,7 +1,6 @@
 import {createSlice} from '@reduxjs/toolkit';
 
 const initialState = {
-        name :   "",
         email : "",
        
 }
@@ -12,11 +11,10 @@ const initialState = {
         loginRedux : (state,action)=>{
             console.log(action.payload.data)
             state.email= action.payload.data.email
-            state.name= action.payload.data.name
         },
         logoutRedux : (state,action)=>{
             state.email= "";
-            state.name= "";
+            
            
         }
     }
