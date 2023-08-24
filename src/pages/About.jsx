@@ -28,10 +28,10 @@ const goToNext = () => {
 }
   return (
     <div>
-     <div className="w-full md:h-[500px] h-[300px] relative group">
+     <div className="w-full h-auto relative group">
         <div
          style={{ backgroundImage: `url(${images[currentIndigo]})` }}
-         className="w-full h-auto bg-cover bg-center rounded-2xl duration-500" height='400'>
+         className="w-full h-auto bg-center rounded-2xl duration-500" >
            </div>
   <div className="hidden group-hover:block absolute top-1/2 transform -translate-y-1/2 left-5 text-2xl rounded-full p-2 bg-black/25 text-white cursor-pointer">
     <BsArrowLeftShort onClick={goToPrevious} size={20} />
