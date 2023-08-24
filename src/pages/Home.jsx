@@ -52,7 +52,7 @@ const Home = () => {
   return (
     <div className="">
       <div className=" w-full md:h-[500px] h-[300px] m-auto group">
-      <div style={{ backgroundImage: `url(${slides[currentIndex]})` }}alt="" className="w-full h-auto object-contain bg-cover bg-center rounded-2xl duration-500">
+      <div style={{ backgroundImage: `url(${slides[currentIndex]})` }}alt="" className="w-full h-auto object-contain bg-cover bg-center rounded-2xl duration-500" height='400'>
   </div>
         <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[50%] left-5 text-2xl rounded-full p-2 bg-black/25 text-white cursor-pointer">
           <BsArrowLeftShort onClick={prevSlide} size={30} />
