@@ -29,9 +29,6 @@ console.log(subpage)
 
   return (
     <div>
-      <div className='w-full h-[300px]'>
-            
-           </div>
     <nav className='w-full md:flex grid grid-cols-1 justify-center md:gap-2 mt-8 font-serif'>
        <Link className={linkClasses('profile')} to={'/account'}>
         <BiSolidUserCircle/>Your Profile
@@ -50,7 +47,7 @@ console.log(subpage)
     )}
     {
       subpage === 'profile' && (
-        <div className='mt-10 mb-4 px-2 text flex flex-col items-center justify-center bg-slate-100 shadow font-sans'>
+        <div className='mt-10 mb-4 px-8 text flex flex-col items-center  bg-slate-100 shadow font-sans'>
             <span className='my-4 flex items-center'>Name: {userData.name}</span>
             <span className='my-4 flex items-center'>Email: {userData.email}</span>
             <span className='my-4 flex items-center'>Reffered by: {userData.refference}</span>
