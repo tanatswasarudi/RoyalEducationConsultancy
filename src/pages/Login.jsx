@@ -87,14 +87,15 @@ const Login = () => {
         <span> 
           <BiSolidLockAlt/>
         </span> 
-            <input   type={showPassword ? "text" : "password"} name='password' placeholder='*******' className=' w-full outline-none' value={data.password}onChange={handleOnChange}/>   
+            <input   type={showPassword ? "text" : "password" } name='password' placeholder='*******' className=' w-full outline-none' value={data.password}onChange={handleOnChange}/>   
             <span className="flex text-xl" onClick={handleShowPassword}>
               {showPassword ? <BiShowAlt /> : <BiHide />}
             </span>
             </div>
+       <button type='submit' className='bg-primary px-4 py-2 rounded-full hover:bg-red-800 font-serif'>Login</button>
        
-        <button type='submit' className='bg-primary'>Login</button>
-        <p className='mt-4 px-2'>Don't Have an Account ? <Link to='/register' className='text-blue-500'>Register</Link> </p>
+        
+        <p className='mt-4 px-2'> Don't Have an Account ? <Link to='/register' className='text-blue-500'>Register</Link> </p>
       </form>
       </div>
     </div>

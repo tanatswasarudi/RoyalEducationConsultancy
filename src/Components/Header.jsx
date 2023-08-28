@@ -39,7 +39,7 @@ const Header = () => {
       <header className="fixed top-0 left-0 justify-between h-20 shadow flex items-center  w-full z-50  bg-white ">
           
           <div>
-           <Link to={"/"} className=" cursor-pointer px-4 ">
+           <Link to={"/account"} className=" cursor-pointer px-4 ">
             <div className="h-20 w-22"><img src={logo} alt="" className='h-full w-full'/></div>       
                 </Link>
            </div>  
