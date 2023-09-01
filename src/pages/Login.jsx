@@ -51,7 +51,6 @@ const Login = () => {
                     // Navigate to the home page
                     navigate('/account');
                     console.log(userData)
-
                   } else {
                     // If the response was not successful, show error message
                     toast.error(responseData.message);
@@ -74,28 +73,26 @@ const Login = () => {
         <div className="w-20 h-20 mx-auto">
           <img src={login} alt="" className='rounded-full w-full h-full' />
         </div>
+
       <form className='max-w-md mx-auto' onSubmit={handleSubmit}>
-      <label htmlFor='email' className='px-3 font-serif'>Email</label>
         <div className='flex items-center w-full border my-1 py-2 px-3 rounded-full'>
               <span>
               <MdEmail className="text-md " />
               </span>
               <input type='email' name='email' placeholder='johndoe@gmail.com' className=' w-full outline-none'value={data.email} onChange={handleOnChange}/>  
          </div>
-         <label htmlFor='password' className='px-3 mt-4 font-serif'>Password</label>
         <div className='flex items-center w-full border my-1 py-2 px-3 rounded-full'>
-        <span> 
+        <span>
           <BiSolidLockAlt/>
         </span> 
-            <input   type={showPassword ? "text" : "password" } name='password' placeholder='*******' className=' w-full outline-none' value={data.password}onChange={handleOnChange}/>   
+            <input   type={showPassword ? "text" : "password"} name='password' placeholder='*******' className=' w-full outline-none' value={data.password}onChange={handleOnChange}/>   
             <span className="flex text-xl" onClick={handleShowPassword}>
               {showPassword ? <BiShowAlt /> : <BiHide />}
             </span>
             </div>
-       <button type='submit' className='bg-primary px-4 py-2 rounded-full hover:bg-red-800 font-serif'>Login</button>
        
-        
-        <p className='mt-4 px-2'> Don't Have an Account ? <Link to='/register' className='text-blue-500'>Register</Link> </p>
+        <button type='submit' className='bg-primary hover:bg-red-950 cursor-pointer rounded font-serif px-3 py-2 '>Login</button>
+        <p className='mt-4 px-2'>Don't Have an Account ? <Link to='/register' className='text-blue-500'>Register</Link> </p>
       </form>
       </div>
     </div>

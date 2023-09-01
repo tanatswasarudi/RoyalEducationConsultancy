@@ -95,7 +95,7 @@ const Universities = () => {
          <div className='p-4'>
       <form className='flex flex-col w-full  p-3 ' onSubmit={handleSubmit}>
         <h1 className=' text-2xl mt-4'>Title</h1>
-        <p className='text-sm text-gray-500 mb-2'>Title of the apartment</p>
+        <p className='text-sm text-gray-500 mb-2'>Name of the University</p>
         <input type={"text"} name='title' className='w-full border rounded'  onChange={handleOnChange} value={data.title}/>
        
         <label htmlFor='category' className=' text-2xl mt-4'>Price Range</label>
@@ -144,27 +144,27 @@ const Universities = () => {
         <p className='text-gray-500 text-sm mb-2'>select all the perks</p>
         <div className='grid grid-cols-2 md:grid-cols-4 ' >
             <label className='border p-4 gap-2 flex rounded-xl items-center'>
-            <input type='checkbox' name='wifi' checked={selectedPerks.includes('Partial Scholarship')} onChange={handlePerksChange}/>
+            <input type='checkbox' name='Partial Scholarship' checked={selectedPerks.includes('Partial Scholarship')} onChange={handlePerksChange}/>
             <span className='flex items-center'><SiHtmlacademy/>50%</span>
             </label >
             <label className='border p-4 gap-2 flex rounded-xl items-center'>
-            <input type='checkbox' name='parking' checked={selectedPerks.includes('Full Scholarship')} onChange={handlePerksChange} />
+            <input type='checkbox' name='Full Scholarship' checked={selectedPerks.includes('Full Scholarship')} onChange={handlePerksChange} />
             <span className='flex items-center'><SiHtmlacademy/>100%</span>
             </label>
             <label className='border p-4 gap-2 flex rounded-xl items-center'>
-            <input type='checkbox' name='balcony' checked={selectedPerks.includes('Internships')} onChange={handlePerksChange}/>
+            <input type='checkbox' name='Internships' checked={selectedPerks.includes('Internships')} onChange={handlePerksChange}/>
             <span className='flex items-center'><MdWork/>Internships</span>
             </label>
             <label className='border p-4 gap-2 flex rounded-xl items-center'>
-            <input type='checkbox' name='AC' checked={selectedPerks.includes("Free Flight")} onChange={handlePerksChange}/>
+            <input type='checkbox' name='Free Flight' checked={selectedPerks.includes("Free Flight")} onChange={handlePerksChange}/>
             <span className='flex items-center'><RiFlightTakeoffLine/>Free Flight</span>
             </label>
             <label className='border p-4 gap-2 flex rounded-xl items-center'>
-            <input type='checkbox' name='fully furnished'  checked={selectedPerks.includes("Agent Fee")} onChange={handlePerksChange}/>
+            <input type='checkbox' name='Agent Fee'  checked={selectedPerks.includes("Agent Fee")} onChange={handlePerksChange}/>
             <span className='flex items-center'><MdOutlineSupportAgent/>Agent Fee</span>
             </label>
             <label className='border p-4 gap-2 flex rounded-xl items-center'>
-            <input type='checkbox' name='c forms' checked={selectedPerks.includes('Accomodation')} onChange={handlePerksChange}/>
+            <input type='checkbox' name='Accomodation' checked={selectedPerks.includes('Accomodation')} onChange={handlePerksChange}/>
             <span className='flex items-center'><BsFillHouseCheckFill/>Accomodation</span>
             </label>
         </div>

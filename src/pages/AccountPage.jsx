@@ -47,13 +47,23 @@ console.log(subpage)
     )}
     {
       subpage === 'profile' && (
-        <div className='mt-10 mb-4 px-8 text flex flex-col items-center  bg-slate-100 shadow font-sans'>
-            <span className='my-4 flex items-center'>Name: {userData.name}</span>
-            <span className='my-4 flex items-center'>Email: {userData.email}</span>
-            <span className='my-4 flex items-center'>Reffered by: {userData.refference}</span>
-            <span className='my-4 flex items-center'>Guardian's Number: {userData.Gnumber} </span>
-            <span className='my-4 flex items-center'>Guardian's Name: {userData.guardian}</span>
-
+        <div className='mt-10 mb-4 w-full'>
+           <div className="grid md:grid-cols-2 grid-cols-1 md:gap-x-40">
+            <div className="px-6 p-2 shadow rounded ">
+              <span className='font-serif flex items-center'>Name: {userData.name}</span>
+              <span className='font-serif flex items-center'>Email: {userData.email}</span>
+              <span className='font-serif flex items-center'>Phone: {userData.phone}</span>
+              <span className='font-serif flex items-center'>Agent: {userData.agent}</span>
+            </div>
+            <div className="px-6 p-2 shadow rounded">
+            <span className='font-serif flex items-center'>Guardian's Name: {userData.guardian}</span>
+            <span className='font-serif flex items-center '>Guardian's number: {userData.Gnumber}</span>
+            <span className='font-serif flex items-center'>Nationality: {userData.nationality}</span>
+            <span className='font-serif flex items-center'>Degree: {userData.degree}</span>
+            </div>
+            
+           </div>
+           <div className=""></div>
          </div>
       )
     }

@@ -2,7 +2,7 @@ import React,{useState} from 'react'
 import { Link, useNavigate} from 'react-router-dom'
 import { BiShowAlt, BiHide, BiSolidUserPin } from "react-icons/bi";
 import { MdEmail,MdSupportAgent } from "react-icons/md";
-import { toast } from "react-hot-toast";
+import { toast } from "react-toastify"
 import {FaUserTie} from 'react-icons/fa'
 import {BiSolidLockAlt} from 'react-icons/bi'
 import {AiFillPhone} from 'react-icons/ai'
@@ -38,42 +38,32 @@ const Register = () => {
             const handleSubmit = async (e) => {
               e.preventDefault();
               
-              const { name, email,phone,guardian,Gnumber, password, course,degree,altcourse ,agent, nationality,stream} = data;
+              const { name, email,phone,Gnumber, guardian, password,degree, course, altcourse, agent, nationality, stream } = data;
               
-              if ( phone && email && name && guardian && Gnumber && password&& course && degree && altcourse && agent && nationality && stream ) {
-                const fetchDta = await fetch(`${process.env.REACT_APP_SERVER_DORMIN}/register`,{
-                  method : "POST",
-                  headers :{
-                    "content-type" : "application/json"
-                  },
-                  body : JSON.stringify(data)
-                })
-            const fetchRes = await fetchDta.json()
-            console.log(fetchRes)
-            toast(fetchRes.message)
-            navigate('/login');
-            setData (()=>{
-              return{
-                name: "",
-                email: "",
-                phone: "",
-                Gnumber: "",
-                guardian: "",
-                password: "",
-                degree: "",
-                course: "",
-                altcourse: "",
-                agent: "",
-                nationality: "",
-                stream: "",
+              if (name && email && phone && Gnumber && guardian && password && degree && course && altcourse && agent && nationality && stream ) {
+                try {
+                  const response = await fetch(`${process.env.REACT_APP_SERVER_DORMIN}/register`, {
+                    method: 'POST',
+                    headers: {
+                      'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(data),
+                  });
+                  const responseData = await response.json();
+                  if (response.ok) {
+                    toast.success(responseData.message);
+                    navigate('/login');
+                  } else {
+                    toast.error(responseData.message);
+                  }
+                } catch (error) {
+                  console.error(error);
+                  toast.error('Internal server error');
+                }
+              } else {
+                toast.error('Enter missing fields');
               }
-            })
-          }
-          else{
-            toast("Application was not succesful")
-          }
-        }
-              
+            };
             
 
   return (
@@ -214,7 +204,7 @@ const Register = () => {
               {showPassword ? <BiShowAlt /> : <BiHide />}
             </span>
           </div>
-          <button type="submit" className='primary'>Submit</button>
+          <button type="submit" className='bg-primary px-3 py-2 rounded hover:bg-red-950 cursor-pointer'>Submit</button>
         <p className='mt-4 px-2'>Already Have an Account ? <Link to='/login' className='text-blue-500'>Login</Link> </p>
           </form>
          

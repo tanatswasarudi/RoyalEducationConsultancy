@@ -22,7 +22,6 @@ const CardFeature = ({title,address,photos,price, description,id,perks,category,
          </div>
           
           <div className='flex flex-col'>
-          <p className='font-bold mb-2'>{category}</p>
           <p className='font-bold mb-2'>{address}</p>
           <h2 className='text-sm font-serif font-bold text-blue-400'>{title}</h2>
           <div className='grid grid-cols-2 md:grid-cols-4 text-sm text-cyan-500 capitalize font-serif gap-2'>

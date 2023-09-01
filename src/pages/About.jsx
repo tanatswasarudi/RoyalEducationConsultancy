@@ -28,11 +28,8 @@ const goToNext = () => {
 }
   return (
     <div>
-     <div className="w-full md:h-[400px] h-[300px] relative group">
-        <div
-         style={{ backgroundImage: `url(${images[currentIndigo]})` }}
-         className="w-full h-full bg-center rounded-2xl duration-500" >
-           </div>
+     <div className="w-full md:h-[400px] h-[300px] relative group mb-8">
+     <img className='md:w-[1400px] w-[400px] md:h-[500px] h-[300px]' src={images[currentIndigo]} alt=''/>
   <div className="hidden group-hover:block absolute top-1/2 transform -translate-y-1/2 left-5 text-2xl rounded-full p-2 bg-black/25 text-white cursor-pointer">
     <BsArrowLeftShort onClick={goToPrevious} size={20} />
   </div>
@@ -53,7 +50,7 @@ const goToNext = () => {
 </div>
 
       <div className="grid px-10 md:px-3 md:grid-cols-2 grid-cols-1 gap-6 mt-10 ">
-        <div className="w-[300px] h-[350px] md:h-[500px] md:w-[490px] ">
+        <div className="w-[300px] md:mt-10 h-[350px] md:h-[500px] md:w-[490px] ">
           <img src={logo} alt="" className='w-full h-full' />
         </div>
         <div className="px-3 text-gray-600">
