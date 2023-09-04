@@ -34,7 +34,7 @@ console.log(subpage)
         <BiSolidUserCircle/>Your Profile
       </Link>
       <Link className={linkClasses('scholarship')} to={'/account/scholarship'}>
-        <HiAcademicCap/>Study Abroad 
+        <HiAcademicCap/>Work with Region 
       </Link>
       <Link className={linkClasses('universities')} to={'/account/universities'}>
       <AiFillAccountBook/>Work with Budget

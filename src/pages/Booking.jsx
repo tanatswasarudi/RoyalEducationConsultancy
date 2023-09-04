@@ -6,6 +6,7 @@ import {GrClose} from 'react-icons/gr'
 import { toast } from 'react-hot-toast';
 import {BiChevronRight} from 'react-icons/bi'
 
+
 const Booking = () => {
     const { filterby } = useParams();
     const DataProduct = useSelector((state) => state.product.productList);
@@ -117,12 +118,19 @@ const Booking = () => {
                  <span className='flex'><BiChevronRight className='text-sm text-black'/>{productDisplay.perks[4]}</span>
                  <span className='flex'><BiChevronRight className='text-sm text-black'/>{productDisplay.perks[5]}</span>
                </div>
-             <div className='flex flex-col font-serif text-lg md:text-2xl my-4 w-full'>
-               Catch Us on Youtube:
-               <span>{productDisplay.Videolink}</span>
+             <div className='my-4 w-full'>
+              <span className='text-lg font-serif'>Catch Us on Youtube:</span>
+              <iframe
+      width="500"
+      height="400"
+      src={productDisplay.Videolink}
+      frameborder="0"
+      allowfullscreen
+    ></iframe>
+    
              </div> 
              <div className='flex font-bold mb-4'>
-              <span className='text-red-500'>$</span>{productDisplay.price}
+             Fees per semester:<span className='text-red-500'>$</span>{productDisplay.price}
             </div>
             <div className='my-4'>
              <h2 className='font-semibold text-lg md:text-2xl'>About the University</h2>

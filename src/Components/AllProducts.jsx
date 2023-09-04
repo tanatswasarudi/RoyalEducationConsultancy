@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react'
-import FilterProduct from './FilterProducts'
+import FilterProducts from './FilterProducts'
 import CardFeature from './CardFeature'
 import { useSelector } from 'react-redux'
 
 const AllProducts = () => {
     const DataProduct = useSelector((state)=>state.product.productList)
-    const categoryList = [...new Set(DataProduct.map(el=>el.category))]
+    const categoryList = [...new Set(DataProduct.map(el=>el.category2))]
   console.log(categoryList)
 
   //filter data display
@@ -31,7 +31,7 @@ const handleFilterProduct = (category2 )=>{
       {
         categoryList[0] && categoryList.map(el =>{
           return(
-            <FilterProduct category2={el} onClick={()=>handleFilterProduct(el)}/> 
+            <FilterProducts category2={el} onClick={()=>handleFilterProduct(el)}/> 
           )
         })
       }
@@ -47,7 +47,6 @@ const handleFilterProduct = (category2 )=>{
                 id={el._id}
                 photos={el.photos}
                 title={el.title}
-                category={el.category}
                 category2={el.category2}
                 perks={el.perks}
                 price={el.price}
