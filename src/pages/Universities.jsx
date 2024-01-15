@@ -105,6 +105,7 @@ const Universities = () => {
           <option value={"above 1000"}>Above 1000</option>
           <option value={"below 2500"}>Below 2500</option>
           <option value={"above 2500"}>Above 2500</option>
+          <option value={"fully funded"}>Fully Funded</option>
           </select>
 
           <label htmlFor='category' className=' text-2xl mt-4'>Region</label>
@@ -113,6 +114,7 @@ const Universities = () => {
           <option value={"Europe"}>Europe</option>
           <option value={"India"}>India</option>
           <option value={"Africa"}>Africa</option>
+          <option value={"Africa"}>China</option>
           </select>
         <h1 className=' text-2xl mt-4'>Address</h1>
         <p className='text-sm text-gray-500 mb-2'>Address to this University</p>
