@@ -31,6 +31,7 @@ const Header = () => {
   const handleShowMenu = () => {
     setShowMenu((preve) => !preve);
   };
+  
   const dispatch = useDispatch();
   const handleLogout = () => {
     dispatch(logoutRedux());  
@@ -57,8 +58,8 @@ const Header = () => {
          <div className='mt-30 py-3'>
            {
             showMenu && (
-              <div className="absolute  bg-purple-700  right-2 py-1  font-serif w-36  flex items-center flex-col m-auto cursor-pointer shadow rounded min-w-[100px]">   
-              <nav className='flex items-center flex-col text-base w-32 px-2 py-1 md:text-lg bg-black text-cyan-500 '>
+              <div className="absolute right-2 py-1 font-serif w-36 rounded-lg ease-in-out duration-300 flex items-center flex-col m-auto cursor-pointer shadow  min-w-[100px]">   
+              <nav className='flex items-center flex-col text-base rounded-lg w-36 px-2 py-1 md:text-lg bg-black text-cyan-500 '>
                  {userData.name ? (
                 <Link to={"/"} className="mb-6 flex items-center" onClick={handleLogout}><span className="">{userData.name}</span><BiUserMinus className='text-2xl'/> </Link>
                 && <Link to={"account"} className='flex mb-6 items-center'><BiSolidUserAccount className='text-2xl'/>Account</Link>
