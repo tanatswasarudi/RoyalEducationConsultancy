@@ -114,7 +114,7 @@ const Universities = () => {
           <option value={"Europe"}>Europe</option>
           <option value={"India"}>India</option>
           <option value={"Africa"}>Africa</option>
-          <option value={"Africa"}>China</option>
+          <option value={"China"}>China</option>
           </select>
         <h1 className=' text-2xl mt-4'>Address</h1>
         <p className='text-sm text-gray-500 mb-2'>Address to this University</p>
